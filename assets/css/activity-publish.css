@@ -1,0 +1,26 @@
+.activity-publish {
+    width: 50%;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.publish-item {
+    margin-bottom: 20px;
+}
+.activity-text {
+    width: 200px;
+}
+.activity-text-small {
+    width: 100px;
+    margin-right: 20px;
+}
+.activity-textarea {
+    width: 400px;
+    height: 300px;
+}
+.publish-btn {
+    float: right;
+    margin-right: 40px;
+}
+.date {
+    margin-right: 10px;
+}

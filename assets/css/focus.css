@@ -1,0 +1,29 @@
+.focuses {
+    width: 60%;
+}
+.focus-head {
+    margin-left: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 5px;
+    margin-right: 10px;
+}
+.focus-item {
+    margin-left: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.focus-item .focus-face{
+    width: 60px;
+    height: 60px;
+}
+.focus-item .focus-info {
+    margin-left: 70px;
+    position: relative;
+}
+.focus-item .focus-info .focus-name {
+    font-size: 17px;
+}
+.focus-item .focus-info .focus-intro {
+    color: rgba(0,0,0,0.4);
+}

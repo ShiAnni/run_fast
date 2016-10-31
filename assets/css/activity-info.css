@@ -1,0 +1,15 @@
+.activity-info-content {
+    width: 50%;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.activity-info-content label {
+    font-weight: 600;
+    margin-right: 10px;
+}
+.activity-info-item {
+    margin-bottom: 10px;
+}
+.activity-info-item div {
+    margin-right: 20px;
+}

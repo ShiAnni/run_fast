@@ -1,0 +1,196 @@
+body {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.content-container {
+    margin-left: 10%;
+    margin-top: 20px;
+}
+.first-row::before {
+    content: "";
+    display: table;
+}
+.first-row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.first-row {
+
+}
+.personal-info::before {
+    content: "";
+    display: table;
+}
+.personal-info::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.personal-info {
+    width: 60%;
+    margin-right: 20px;
+}
+.personal-social {
+    width: 25%;
+    display: table;
+}
+.info-face-img {
+    margin-left: 20px;
+    margin-right: 10px;
+    float: left;
+}.personal-info-right {
+    margin-left: 10px;
+    float: left;
+ }
+.personal-info h2 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    float: left;
+}
+.personal-info p {
+    margin-top: 5px;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+.personal-info-span span{
+    color: #4f4f4f;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.personal-info-span .not-last-span {
+    border-right: 1px solid rgba( 0, 0 ,0, 0.3);
+}
+.title::before {
+    content: "";
+    display: table;
+}
+.title::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.level {
+    float: left;
+    margin-left: 20px;
+    color: #2164b0;
+    font-size: 1.4em;
+}
+.experience::before {
+    content: "";
+    display: table;
+}
+.experience::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.experience {
+    margin-top: 3px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.experience .experience-title{
+    float: left;
+}
+.experience-bar {
+    margin-top: 3px;
+    margin-right: 10px;
+    float: left;
+    width: 200px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid rgba( 0, 0, 0, 0.2);
+}
+.experience-bar-filled {
+    width: 60%;
+    height: 16px;
+    border-radius: 3px;
+    background-color: #2164b0;
+    background-image: linear-gradient( to right, #2164b0, #3eb0ab);
+}
+.experience-num {
+    float: left;
+}
+.block {
+    margin-left: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    float: left;
+    width: 40%;
+}
+.social-title {
+    font-size: 18px;
+    padding-bottom: 5px;
+    color: #2164b0;
+}
+.personal-social .block a:hover{
+    color: #52c6b6;
+}
+.dynamics-send {
+    width: 60%;
+    margin-top: 20px;
+}
+.dynamics-send .text-area {
+    width: 95%;
+    min-width: 400px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    margin-left: 2.5%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.dynamics-send .send-btn {
+    float: right;
+    margin-right: 2.5%;
+}
+.dynamics {
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.dynamics-item {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+.dynamics-item .dynamics-title {
+    color: #2164b0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.dynamics-item .dynamics-face {
+    float: left;
+    margin-right: 10px;
+}
+.dynamics-item .dynamics-name-time {
+    float: left;
+    padding-top: 3px;
+}
+.dynamics-content {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.edit-btn {
+    float: right;
+    color: #2164b0;
+}
+.edit-btn:hover {
+    color: #2c94c1;
+}
+.refresh {
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #2164b0;
+    margin-left: 43%;
+}
+.refresh:hover {
+    color: #2c94c1;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="apache">
+    <serverData>
+      <paths name="apache">
+        <serverdata>
+          <mappings>
+            <mapping deploy="htdocs" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="tomcat">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/run_fast" local="$PROJECT_DIR$" web="/run_fast" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

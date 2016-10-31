@@ -1,0 +1,62 @@
+.friend-list {
+    width: 50%;
+    margin-right: 20px;
+    margin-left: 4%;
+}
+.friend-apply {
+    width: 40%;
+}
+.friend-item {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+}
+.friend-add {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.friend-add .friend-add-icon {
+    font-size: 20px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-bottom: 7px;
+    padding-top: 3px;
+    color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    border: 2px dashed rgba(0, 0, 0, 0.3);
+    margin-right: 20px;
+}
+.friend-add .friend-add-content {
+    padding-top: 8px;
+}
+.friend-face {
+    margin-right: 20px;
+}
+.friend-face .friend-face-img {
+    width: 40px;
+    height: 40px;
+}
+.friend-intro-name .friend-intro {
+    color:  rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+}
+.friend-btn {
+    float: right;
+    margin-top: 4px;
+    margin-right: 20px;
+}
+.friend-apply {
+    padding-left: 20px;
+}
+.friend-apply .apply-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.friend-apply .apply-item {
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-top: 5px;
+}

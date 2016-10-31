@@ -1,0 +1,36 @@
+.user-list {
+    width: 70%;
+    min-width: 500px;
+    margin-left: 15%;
+}
+.user-list .user-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.user-item .user-face {
+    margin-left: 5%;
+}
+.user-item .user-name {
+    font-size: 16px;
+    margin-left: 20px;
+    padding-top: 5px;
+}
+.user-search {
+    padding-top: 1px;
+}
+.user-search .search-text {
+    margin-left: 5%;
+    max-width: 50%;
+    margin-right: 20px;
+}
+.user-btn {
+    float: right;
+    margin-top: 2px;
+    margin-right: 20px;
+}
+.search-btn {
+    margin-right: 20px;
+}

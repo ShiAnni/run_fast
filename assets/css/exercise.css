@@ -1,0 +1,54 @@
+.exercise-data {
+    width: 90%;
+    min-width: 600px;
+    padding-left: 10%;
+    margin-bottom: 10px;
+}
+.exercise-item {
+    margin-right: 12%;
+    float: left;
+    text-align: center;
+}
+.exercise-info {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.exercise-info .exercise-num {
+    color: #c60d1d;
+}
+.row-btn {
+    margin-top: 35px;
+}
+.health-data {
+    width: 90%;
+    min-width: 600px;
+    padding-left: 12%;
+    margin-bottom: 10px;
+}
+.health-data .height {
+    margin-right: 19%;
+}
+.health-data .weight {
+    margin-right: 15%;
+}
+.health-data .water {
+    
+}
+.health-item {
+    float: left;
+    text-align: center;
+}
+.data-statistics {
+    width: 90%;
+}
+.control-group {
+    margin-left: 20px;
+}
+.chart {
+
+}
+.control-label {
+    margin-left: 10px;
+    margin-top: 4px;
+}
