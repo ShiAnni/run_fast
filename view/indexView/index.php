@@ -12,7 +12,7 @@
         <img class="head-logo" src="../../image/run_icon-50x50.png">
         <div class="head-menu">
             <nav class="head-nav">
-                <a class="nav-item nav-selected" href="/view/index/index.html">主页</a>
+                <a class="nav-item nav-selected" href="/view/indexView/index.html">主页</a>
                 <a class="nav-item" href="/data">运动数据</a>
                 <a class="nav-item" href="/activity">活动</a>
             </nav>
@@ -43,7 +43,7 @@
         <div class="activity common-column content index-item item-left">
             <div class="title">最新活动</div>
             <ul class="news-ul">
-                <li><a class="link-btn" href="../activity/activity-info.html">玄武湖健走</a><div class="news-time">2016-10-21</div></li>
+                <li><a class="link-btn" href="../activityView/activity-info.html">玄武湖健走</a><div class="news-time">2016-10-21</div></li>
                 <li><a class="link-btn">登栖霞山</a><div class="news-time">2016-10-21</div></li>
             </ul>
         </div>

@@ -15,7 +15,7 @@
             <nav class="head-nav">
                 <a class="nav-item" href="/view/indexindex.html">主页</a>
                 <a class="nav-item" href="/view/exerciseexercise.html">运动数据</a>
-                <a class="nav-item nav-selected" href="/view/activity/activity-list.html">活动</a>
+                <a class="nav-item nav-selected" href="/view/activityView/activity-list.html">活动</a>
             </nav>
             <div  class="personal-info-header">
                 <div>
@@ -33,12 +33,12 @@
 <div class="common-columns">
     <div class="content-container common-column activity-nav">
         <div class="activity-aside">
-            <a  href="/view/activity/activity-list.html">
+            <a  href="/view/activityView/activity-list.html">
                 <div class="activity-nav-item activity-first">
                     活动列表
                 </div>
             </a>
-            <a href="/view/activity/activity-publish.html">
+            <a href="/view/activityView/activity-publish.html">
                 <div class="activity-nav-item">
                     发布活动
                 </div>

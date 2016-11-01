@@ -18,7 +18,7 @@ $view = new ActivityView();
             <nav class="head-nav">
                 <a class="nav-item" href="/view/indexindex.html">主页</a>
                 <a class="nav-item" href="/view/exerciseexercise.html">运动数据</a>
-                <a class="nav-item nav-selected" href="/view/activity/activity-list.html">活动</a>
+                <a class="nav-item nav-selected" href="/view/activityView/activity-list.html">活动</a>
             </nav>
             <div  class="personal-info-header">
                 <div>
@@ -37,12 +37,12 @@ $view = new ActivityView();
     <div class="common-columns">
         <div class="content-container common-column activity-nav">
             <div class="activity-aside">
-                <a  href="/view/activity/activity-list.html">
+                <a  href="/view/activityView/activity-list.html">
                     <div class="activity-nav-item activity-first">
                         活动列表
                     </div>
                 </a>
-                <a href="/view/activity/activity-publish.html">
+                <a href="/view/activityView/activity-publish.html">
                     <div class="activity-nav-item activity-selected">
                         发布活动
                     </div>
@@ -52,7 +52,7 @@ $view = new ActivityView();
         <div class="activity-content common-column content-first">
             <div class="activity-list">
                 <div class="activity-list-item common-columns">
-                    <a href="/view/activity/activity-info.html">
+                    <a href="/view/activityView/activity-info.html">
                         <div class="activity-list-item-content">
                             <h2>玄武湖健走</h2>
                             <p>组队到玄武湖健走</p>
@@ -62,7 +62,7 @@ $view = new ActivityView();
                                 <div><div>参与人数：</div><div class="info-content"><b>21/50</b></div></div>
                                 <div><div>权限要求：</div><div class="info-content">1级</div></div>&nbsp;
                                 <?php
-                                echo $this->output;
+                                echo $view->content;
                                 ?>
                             </div>
                         </div>

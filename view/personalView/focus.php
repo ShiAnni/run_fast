@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>跑得快 - 大清没有完的粉丝</title>
+    <title>跑得快 - 大清没有完的关注</title>
     <link rel="stylesheet" type="text/css" href="../../assets/css/common.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/personal.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/focus.css">
@@ -83,8 +83,8 @@
         </div>
         <div class="content focuses">
             <div class="focus-head">
-                <a class="link-btn" href="/view/personal/personal.html">大清没有完 </a>有1926个粉丝
-                <a class="link-btn btn-right" href="/view/personal/personal.html">返回个人中心</a>
+                <a class="link-btn" href="/view/personalView/personal.html">大清没有完 </a>关注了90个人
+                <a class="link-btn btn-right" href="/view/personalView/personal.html">返回个人中心</a>
             </div>
             <div class="focus-item common-columns">
                 <a class="custom-btn plane-colored-btn btn-disabled btn-right">取消关注</a>
@@ -108,23 +108,13 @@
 
             </div>
             <div class="focus-item common-columns">
-                <a class="custom-btn plane-colored-btn btn-right">关注</a>
+                <a class="custom-btn plane-colored-btn btn-right">取消关注</a>
                 <a class="common-column">
-                    <img src="../../image/apply_face.jpg" class="focus-face">
+                    <img src="../../image/manager.jpg" class="focus-face">
                 </a>
                 <div class="focus-info">
-                    <div class="focus-name"><a class="link-btn">维他柠檬茶</a></div>
-                    <div class="focus-intro">Excuse me？</div>
-                </div>
-            </div>
-            <div class="focus-item common-columns">
-                <a class="custom-btn plane-colored-btn btn-right">关注</a>
-                <a class="common-column">
-                    <img src="../../image/apply_face_2.jpg" class="focus-face">
-                </a>
-                <div class="focus-info">
-                    <div class="focus-name"><a class="link-btn">爱姆安格瑞</a></div>
-                    <div class="focus-intro">I'm angry!</div>
+                    <div class="focus-name"><a class="link-btn">doge</a></div>
+                    <div class="focus-intro">权限汪</div>
                 </div>
             </div>
         </div>

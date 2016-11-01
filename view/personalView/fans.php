@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>跑得快 - 大清没有完的个人中心</title>
+    <title>跑得快 - 大清没有完的粉丝</title>
     <link rel="stylesheet" type="text/css" href="../../assets/css/common.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/personal.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/focus.css">
 </head>
 <body>
 <header class="header" role="banner">
@@ -65,7 +66,7 @@
         <div class="personal-social content">
             <div class="block">
                 <div class="social-title">关注</div>
-                <a href="/view/personal/focus.html">90</a>
+                <a href="/focus">90</a>
             </div>
             <div class="block">
                 <div class="social-title">粉丝</div>
@@ -80,44 +81,50 @@
                 <a href="/friends">817</a>
             </div>
         </div>
-        <div class="dynamics-send content">
-            <div class="text-area" contenteditable="true">
-
+        <div class="content focuses">
+            <div class="focus-head">
+                <a class="link-btn" href="/view/personalView/personal.html">大清没有完 </a>有1926个粉丝
+                <a class="link-btn btn-right" href="/view/personalView/personal.html">返回个人中心</a>
             </div>
-            <a class="custom-btn send-btn colored-btn">发送动态</a>
-        </div>
-        <div class="dynamics content">
-            <div class="dynamics-item">
-                <a href="/refresh_dynamics">
-                    <div class="refresh">刷新动态</div>
+            <div class="focus-item common-columns">
+                <a class="custom-btn plane-colored-btn btn-disabled btn-right">取消关注</a>
+                <a class="common-column">
+                    <img src="../../image/friend_face.png" class="focus-face">
                 </a>
-            </div>
-            <div class="dynamics-item">
-                <a href="/personal/umaru">
-                    <div class="dynamics-title common-columns">
-                        <img class="dynamics-face" src="../../image/friend_face.png" alt="小埋" width="50px" height="50px">
-                        <div class="dynamics-name-time">
-                            <div>小埋</div>
-                            <div>22:02</div>
-                        </div>
-                    </div>
-                </a>
-                <div class="dynamics-content">
-                    我要喝可乐！
+                <div class="focus-info">
+                    <div class="focus-name"><a class="link-btn">小埋</a></div>
+                    <div class="focus-intro">吃睡玩三连击</div>
                 </div>
             </div>
-            <div class="dynamics-item">
-                <a href="/personal/umaru">
-                    <div class="dynamics-title common-columns">
-                        <img class="dynamics-face" src="../../image/friend_face_2.jpg" alt="学习一个" width="50px" height="50px">
-                        <div class="dynamics-name-time">
-                            <div>学习一个</div>
-                            <div>0:02</div>
-                        </div>
-                    </div>
+            <div class="focus-item common-columns">
+                <a class="custom-btn plane-colored-btn btn-disabled btn-right">取消关注</a>
+                <a class="common-column">
+                    <img src="../../image/friend_face_2.jpg" class="focus-face">
                 </a>
-                <div class="dynamics-content">
-                    阅读《他改变了中国》
+                <div class="focus-info">
+                    <div class="focus-name"><a class="link-btn">学习一个</a></div>
+                    <div class="focus-intro">你们还是要提高自己的姿势水平</div>
+                </div>
+
+            </div>
+            <div class="focus-item common-columns">
+                <a class="custom-btn plane-colored-btn btn-right">关注</a>
+                <a class="common-column">
+                    <img src="../../image/apply_face.jpg" class="focus-face">
+                </a>
+                <div class="focus-info">
+                    <div class="focus-name"><a class="link-btn">维他柠檬茶</a></div>
+                    <div class="focus-intro">Excuse me？</div>
+                </div>
+            </div>
+            <div class="focus-item common-columns">
+                <a class="custom-btn plane-colored-btn btn-right">关注</a>
+                <a class="common-column">
+                    <img src="../../image/apply_face_2.jpg" class="focus-face">
+                </a>
+                <div class="focus-info">
+                    <div class="focus-name"><a class="link-btn">爱姆安格瑞</a></div>
+                    <div class="focus-intro">I'm angry!</div>
                 </div>
             </div>
         </div>

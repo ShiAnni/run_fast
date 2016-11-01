@@ -7,7 +7,7 @@
  */
 class ActivityController extends Controller {
     function __construct($view) {
-        require("../../model/activity/activityModel.php");
+        require("../../model/activityModel/activityModel.php");
         $this->model = new ActivityModel($view);
     }
 
