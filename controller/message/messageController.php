@@ -6,8 +6,8 @@
  * Time: 20:53
  */
 class MessageController extends Controller {
-    function __construct(){
-        $this->model = new MessageModel();
+    function __construct($view){
+        $this->model = new MessageModel($view);
     }
 
     function sendMessage($senderName, $receiverName, $content){

@@ -6,8 +6,8 @@
  * Time: 20:51
  */
 class FriendController extends Controller {
-    function __construct(){
-        $this->model = new FriendModel();
+    function __construct($view){
+        $this->model = new FriendModel($view);
     }
 
     function friendList($userId, $keyword){

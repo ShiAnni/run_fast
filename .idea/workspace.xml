@@ -5,9 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff8a1631-e436-4cdf-b323-aac80f58317c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/personal/dynamicsController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/personal/fansController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/personal/focusController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/personal/dynamicsModel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/personal/fansModel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/personal/focusModel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/personal/personalModel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/personal/userinfoModel.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model/personal/PersonalModel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model/personal/UserInfoModel.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/activity/activity.php" afterPath="$PROJECT_DIR$/view/activity/activity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Model.php" afterPath="$PROJECT_DIR$/model/Model.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/activity/ActivityController.php" afterPath="$PROJECT_DIR$/controller/activity/activityController.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/authority/AuthorityController.php" afterPath="$PROJECT_DIR$/controller/authority/authorityController.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/exercise/ExerciseController.php" afterPath="$PROJECT_DIR$/controller/exercise/exerciseController.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/index/IndexController.php" afterPath="$PROJECT_DIR$/controller/index/indexController.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/personal/FriendController.php" afterPath="$PROJECT_DIR$/controller/friend/friendController.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/personal/MessageController.php" afterPath="$PROJECT_DIR$/controller/message/messageController.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/personal/PersonalController.php" afterPath="$PROJECT_DIR$/controller/personal/personalController.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/personal/UserInfoController.php" afterPath="$PROJECT_DIR$/controller/personal/userinfoController.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/model/activity/ActivityModel.php" afterPath="$PROJECT_DIR$/model/activity/activityModel.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/model/authority/AuthorityModel.php" afterPath="$PROJECT_DIR$/model/authority/authorityModel.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/model/exercise/ExerciseModel.php" afterPath="$PROJECT_DIR$/model/exercise/exerciseModel.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/model/index/IndexModel.php" afterPath="$PROJECT_DIR$/model/index/indexModel.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/model/personal/FriendModel.php" afterPath="$PROJECT_DIR$/model/friend/friendModel.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/model/personal/MessageModel.php" afterPath="$PROJECT_DIR$/model/message/messageModel.php" />
     </list>
     <ignored path="run_fast.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,31 +54,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ActivityModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/activity/ActivityModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="function.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/function.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="activity.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/activity/activity.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
+            <state relative-caret-position="0">
               <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fansModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/personal/fansModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fansController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/personal/fansController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -87,15 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/css/exercise.css" />
-        <option value="$PROJECT_DIR$/exercise.html" />
-        <option value="$PROJECT_DIR$/activity-publish.html" />
-        <option value="$PROJECT_DIR$/assets/css/activity-publish.css" />
-        <option value="$PROJECT_DIR$/register.html" />
-        <option value="$PROJECT_DIR$/assets/css/focus.css" />
-        <option value="$PROJECT_DIR$/focus.html" />
-        <option value="$PROJECT_DIR$/personal.html" />
-        <option value="$PROJECT_DIR$/fans.html" />
         <option value="$PROJECT_DIR$/function.php" />
         <option value="$PROJECT_DIR$/model/personal/user-info.html" />
         <option value="$PROJECT_DIR$/view/index/index.php" />
@@ -112,32 +126,41 @@
         <option value="$PROJECT_DIR$/view/personal/focus.php" />
         <option value="$PROJECT_DIR$/view/personal/user-info.php" />
         <option value="$PROJECT_DIR$/controller/activity/activityController.php" />
-        <option value="$PROJECT_DIR$/model/personal/personalModel.php" />
-        <option value="$PROJECT_DIR$/controller/personal/personalController.php" />
         <option value="$PROJECT_DIR$/model/authority/authorityModel.php" />
         <option value="$PROJECT_DIR$/model/activity/activityModel.php" />
         <option value="$PROJECT_DIR$/view/authority/authority.php" />
-        <option value="$PROJECT_DIR$/controller/exercise/ExerciseController.php" />
-        <option value="$PROJECT_DIR$/controller/index/IndexController.php" />
-        <option value="$PROJECT_DIR$/controller/activity/ActivityController.php" />
-        <option value="$PROJECT_DIR$/model/personal/UserInfoModel.php" />
-        <option value="$PROJECT_DIR$/controller/personal/PersonalController.php" />
-        <option value="$PROJECT_DIR$/controller/personal/UserInfoController.php" />
-        <option value="$PROJECT_DIR$/controller/personal/FriendController.php" />
-        <option value="$PROJECT_DIR$/controller/personal/MessageController.php" />
-        <option value="$PROJECT_DIR$/controller/Controller.php" />
-        <option value="$PROJECT_DIR$/controller/authority/AuthorityController.php" />
-        <option value="$PROJECT_DIR$/model/authority/AuthorityModel.php" />
-        <option value="$PROJECT_DIR$/model/exercise/ExerciseModel.php" />
-        <option value="$PROJECT_DIR$/model/index/IndexModel.php" />
-        <option value="$PROJECT_DIR$/model/activity/ActivityModel.php" />
         <option value="$PROJECT_DIR$/model/personal/FriendModel.php" />
         <option value="$PROJECT_DIR$/model/personal/MessageModel.php" />
         <option value="$PROJECT_DIR$/view/View.php" />
         <option value="$PROJECT_DIR$/view/function.php" />
-        <option value="$PROJECT_DIR$/model/Model.php" />
-        <option value="$PROJECT_DIR$/model/personal/PersonalModel.php" />
         <option value="$PROJECT_DIR$/view/activity/activity.php" />
+        <option value="$PROJECT_DIR$/model/Model.php" />
+        <option value="$PROJECT_DIR$/model/activity/ActivityModel.php" />
+        <option value="$PROJECT_DIR$/controller/Controller.php" />
+        <option value="$PROJECT_DIR$/controller/activity/ActivityController.php" />
+        <option value="$PROJECT_DIR$/controller/authority/AuthorityController.php" />
+        <option value="$PROJECT_DIR$/controller/exercise/ExerciseController.php" />
+        <option value="$PROJECT_DIR$/controller/index/IndexController.php" />
+        <option value="$PROJECT_DIR$/controller/personal/FriendController.php" />
+        <option value="$PROJECT_DIR$/controller/personal/MessageController.php" />
+        <option value="$PROJECT_DIR$/controller/personal/PersonalController.php" />
+        <option value="$PROJECT_DIR$/controller/personal/UserInfoController.php" />
+        <option value="$PROJECT_DIR$/model/authority/AuthorityModel.php" />
+        <option value="$PROJECT_DIR$/model/exercise/ExerciseModel.php" />
+        <option value="$PROJECT_DIR$/model/index/IndexModel.php" />
+        <option value="$PROJECT_DIR$/model/friend/FriendModel.php" />
+        <option value="$PROJECT_DIR$/model/message/MessageModel.php" />
+        <option value="$PROJECT_DIR$/model/personal/UserInfoModel.php" />
+        <option value="$PROJECT_DIR$/model/personal/PersonalModel.php" />
+        <option value="$PROJECT_DIR$/model/personal/fansModel.php" />
+        <option value="$PROJECT_DIR$/model/personal/focusModel.php" />
+        <option value="$PROJECT_DIR$/controller/personal/personalController.php" />
+        <option value="$PROJECT_DIR$/controller/personal/dynamicsController.php" />
+        <option value="$PROJECT_DIR$/controller/personal/fansController.php" />
+        <option value="$PROJECT_DIR$/controller/personal/focusController.php" />
+        <option value="$PROJECT_DIR$/model/personal/dynamicsModel.php" />
+        <option value="$PROJECT_DIR$/model/personal/personalModel.php" />
+        <option value="$PROJECT_DIR$/model/personal/userinfoModel.php" />
       </list>
     </option>
   </component>
@@ -180,7 +203,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -216,28 +239,6 @@
               <option name="myItemId" value="run_fast" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="run_fast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="run_fast" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activity" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -267,7 +268,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="activity" />
+              <option name="myItemId" value="personal" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -278,6 +279,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="run_fast" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run_fast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run_fast" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="personal" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -297,19 +320,19 @@
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\study\大三\面向web的计算\run_fast\model\message" />
+      <recent name="D:\study\大三\面向web的计算\run_fast\model\friend" />
+      <recent name="D:\study\大三\面向web的计算\run_fast\controller\message" />
+      <recent name="D:\study\大三\面向web的计算\run_fast\controller\friend" />
+      <recent name="D:\study\大三\面向web的计算\run_fast\controller" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\study\大三\面向web的计算\run_fast\assets\js" />
       <recent name="D:\study\大三\面向web的计算\run_fast\image" />
       <recent name="D:\study\大三\面向web的计算\run_fast\assets\bootstrap" />
       <recent name="D:\study\大三\面向web的计算\run_fast\assets\js\bootstrap-select\css" />
       <recent name="D:\study\大三\面向web的计算\run_fast\assets\js\bootstrap-select\js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\study\大三\面向web的计算\run_fast\controller" />
-      <recent name="D:\study\大三\面向web的计算\run_fast\view" />
-      <recent name="D:\study\大三\面向web的计算\run_fast\model" />
-      <recent name="D:\study\大三\面向web的计算\run_fast\model\index" />
-      <recent name="D:\study\大三\面向web的计算\run_fast\model\authority" />
     </key>
   </component>
   <component name="RunManager">
@@ -408,12 +431,21 @@
       <workItem from="1477826093505" duration="5093000" />
       <workItem from="1477872773898" duration="5837000" />
       <workItem from="1477915112560" duration="11471000" />
-      <workItem from="1477960339991" duration="2474000" />
+      <workItem from="1477960339991" duration="4017000" />
+      <workItem from="1477966937251" duration="1508000" />
     </task>
+    <task id="LOCAL-00001" summary="phpstorm test">
+      <created>1477963317856</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1477963317856</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="224160000" />
+    <option name="totallyTimeSpent" value="227211000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -451,41 +483,15 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="phpstorm test" />
+    <option name="LAST_COMMIT_MESSAGE" value="phpstorm test" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/index/index.html" />
-    <entry file="file://$PROJECT_DIR$/assets/css/message.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/personal.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3458">
-          <caret line="182" column="1" selection-start-line="182" selection-start-column="1" selection-end-line="182" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/focus.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/index/login.html" />
-    <entry file="file://$PROJECT_DIR$/view/index/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/index/register.html" />
     <entry file="file://$PROJECT_DIR$/view/index/register.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -568,20 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/personal/UserInfoModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/personal/UserInfoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/authority/authority.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -593,90 +585,120 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/exercise/ExerciseController.php">
+    <entry file="file://$PROJECT_DIR$/controller/activity/activityController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
+        <state relative-caret-position="150">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/authority/authorityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/activity/activityModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/authority/authorityModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/exercise/exerciseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/friend/friendController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/index/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/exercise/ExerciseModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/activity/ActivityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/authority/AuthorityController.php">
+    <entry file="file://$PROJECT_DIR$/view/View.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/authority/AuthorityModel.php">
+    <entry file="file://$PROJECT_DIR$/model/friend/friendModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="140">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/index/IndexModel.php">
+    <entry file="file://$PROJECT_DIR$/model/index/indexModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="-31">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/personal/FriendController.php">
+    <entry file="file://$PROJECT_DIR$/controller/index/indexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+        <state relative-caret-position="171">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/personal/FriendModel.php">
+    <entry file="file://$PROJECT_DIR$/view/function.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="152">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/personal/MessageModel.php">
+    <entry file="file://$PROJECT_DIR$/model/message/messageModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="149">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/personal/MessageController.php">
+    <entry file="file://$PROJECT_DIR$/controller/message/messageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="168">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/personal/PersonalController.php">
+    <entry file="file://$PROJECT_DIR$/model/personal/focusModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+        <state relative-caret-position="285">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -688,49 +710,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/View.php">
+    <entry file="file://$PROJECT_DIR$/model/personal/fansModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="266">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/function.php">
+    <entry file="file://$PROJECT_DIR$/controller/personal/dynamicsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="190">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Model.php">
+    <entry file="file://$PROJECT_DIR$/controller/personal/fansController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        <state relative-caret-position="266">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/personal/PersonalModel.php">
+    <entry file="file://$PROJECT_DIR$/controller/personal/focusController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        <state relative-caret-position="304">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/activity/ActivityModel.php">
+    <entry file="file://$PROJECT_DIR$/model/personal/dynamicsModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="342">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/personal/personalModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/personal/personalController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/personal/userinfoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/personal/userinfoModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/exercise/exerciseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/activity/activity.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
+        <state relative-caret-position="0">
           <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
           <folding />
         </state>

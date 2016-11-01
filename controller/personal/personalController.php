@@ -6,8 +6,8 @@
  * Time: 23:56
  */
 class PersonalController extends Controller {
-    function __construct(){
-        $this->model = new PersonalModel();
+    function __construct($view){
+        $this->model = new PersonalModel($view);
     }
 
     function getPersonalInfo($userId){
@@ -19,22 +19,6 @@ class PersonalController extends Controller {
     }
 
     function getMessageInfo($userId){
-
-    }
-
-    function getDynamics($userId) {
-
-    }
-
-    function sendDynamic($userId, $dynamic){
-
-    }
-
-    function getFocusList($userId) {
-
-    }
-
-    function getFansList($userId) {
 
     }
 

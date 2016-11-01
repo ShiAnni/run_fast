@@ -6,8 +6,8 @@
  * Time: 21:44
  */
 class MessageModel extends Model {
-    function __construct(){
-
+    function __construct($view){
+        parent::__construct($view);
     }
 
     function sendMessage($senderName, $receiverName, $content){

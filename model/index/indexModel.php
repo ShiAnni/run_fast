@@ -6,8 +6,8 @@
  * Time: 0:14
  */
 class IndexModel extends Model {
-    function __construct(){
-
+    function __construct($view){
+        parent::__construct($view);
     }
 
     function getNews() {

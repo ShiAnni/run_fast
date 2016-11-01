@@ -6,9 +6,9 @@
  * Time: 23:53
  */
 class ActivityController extends Controller {
-    function __construct() {
-        require("../../model/activity/ActivityModel.php");
-        $this->model = new ActivityModel();
+    function __construct($view) {
+        require("../../model/activity/activityModel.php");
+        $this->model = new ActivityModel($view);
     }
 
     function checkActivity($activityId){

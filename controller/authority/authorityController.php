@@ -6,8 +6,8 @@
  * Time: 23:54
  */
 class AuthorityController extends Controller {
-    function __construct() {
-        $this->model = new AuthorityModel();
+    function __construct($view) {
+        $this->model = new AuthorityModel($view);
     }
 
     function getBannedList($keyword) {

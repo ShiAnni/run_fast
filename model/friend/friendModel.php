@@ -6,8 +6,8 @@
  * Time: 21:13
  */
 class FriendModel extends Model {
-    function __construct() {
-
+    function __construct($view) {
+        parent::__construct($view);
     }
 
     function friendList($userId, $keyword){
