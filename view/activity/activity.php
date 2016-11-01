@@ -3,6 +3,7 @@ require_once ("../View.php");
 class ActivityView extends View {
     var $output = "haha";
 }
+$view = new ActivityView();
 ?>
 <!DOCTYPE html>
 <html lang="en">
