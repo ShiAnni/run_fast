@@ -1,8 +1,5 @@
 <?php
-require_once ("../View.php");
-class ActivityView extends View {
-    var $output = "haha";
-}
+require_once ("activityView.php");
 $view = new ActivityView();
 ?>
 <!DOCTYPE html>
