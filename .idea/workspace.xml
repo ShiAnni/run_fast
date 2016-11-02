@@ -4,59 +4,12 @@
     <bookmark url="file://$PROJECT_DIR$/assets/css/common.css" description="list-style-type: none;" line="230" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff8a1631-e436-4cdf-b323-aac80f58317c" name="Default" comment="update interfaces">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataAccess/dataAccess.php" />
+    <list default="true" id="ff8a1631-e436-4cdf-b323-aac80f58317c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/friendView/friendView.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/messageView/messageSendView.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/messageView/messageView.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" afterPath="$PROJECT_DIR$/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/bootstrap-select/js/bootstrap-select.min.js" afterPath="$PROJECT_DIR$/assets/bootstrap-select/js/bootstrap-select.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/notify.min.js" afterPath="$PROJECT_DIR$/assets/js/notify.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/activity/activityController.php" afterPath="$PROJECT_DIR$/controller/activityController/activityController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/authority/authorityController.php" afterPath="$PROJECT_DIR$/controller/authorityController/authorityController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/exercise/exerciseController.php" afterPath="$PROJECT_DIR$/controller/exerciseController/exerciseController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/friend/friendController.php" afterPath="$PROJECT_DIR$/controller/friendController/friendController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/index/indexController.php" afterPath="$PROJECT_DIR$/controller/indexController/indexController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/message/messageController.php" afterPath="$PROJECT_DIR$/controller/messageController/messageController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/personal/dynamicsController.php" afterPath="$PROJECT_DIR$/controller/personalController/dynamicsController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/personal/fansController.php" afterPath="$PROJECT_DIR$/controller/personalController/fansController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/personal/focusController.php" afterPath="$PROJECT_DIR$/controller/personalController/focusController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/personal/personalController.php" afterPath="$PROJECT_DIR$/controller/personalController/personalController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/personal/userinfoController.php" afterPath="$PROJECT_DIR$/controller/personalController/userinfoController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/activity/activityModel.php" afterPath="$PROJECT_DIR$/model/activityModel/activityModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/authority/authorityModel.php" afterPath="$PROJECT_DIR$/model/authorityModel/authorityModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/exercise/exerciseModel.php" afterPath="$PROJECT_DIR$/model/exerciseModel/exerciseModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/friend/friendModel.php" afterPath="$PROJECT_DIR$/model/friendModel/friendModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/index/indexModel.php" afterPath="$PROJECT_DIR$/model/indexModel/indexModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/message/messageModel.php" afterPath="$PROJECT_DIR$/model/messageModel/messageModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/personal/dynamicsModel.php" afterPath="$PROJECT_DIR$/model/personalModel/dynamicsModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/personal/fansModel.php" afterPath="$PROJECT_DIR$/model/personalModel/fansModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/personal/focusModel.php" afterPath="$PROJECT_DIR$/model/personalModel/focusModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/personal/personalModel.php" afterPath="$PROJECT_DIR$/model/personalModel/personalModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/personal/userinfoModel.php" afterPath="$PROJECT_DIR$/model/personalModel/userinfoModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/activity/activity-info.php" afterPath="$PROJECT_DIR$/view/activityView/activity-info.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/activity/activity-publish.php" afterPath="$PROJECT_DIR$/view/activityView/activity-publish.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/activity/activity.php" afterPath="$PROJECT_DIR$/view/activityView/activity.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/activity/activityView.php" afterPath="$PROJECT_DIR$/view/activityView/activityView.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/activity/activityinfoView.php" afterPath="$PROJECT_DIR$/view/activityView/activityinfoView.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/activity/activitylistView.php" afterPath="$PROJECT_DIR$/view/activityView/activitylistView.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/authority/authority.php" afterPath="$PROJECT_DIR$/view/authorityView/authority.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/authority/authorityView.php" afterPath="$PROJECT_DIR$/view/authorityView/authorityView.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/authority/authoritylistView.php" afterPath="$PROJECT_DIR$/view/authorityView/authoritylistView.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/exercise/exercise.php" afterPath="$PROJECT_DIR$/view/exerciseView/exercise.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/exercise/exerciseView.php" afterPath="$PROJECT_DIR$/view/exerciseView/exerciseView.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/friend/friends.php" afterPath="$PROJECT_DIR$/view/friendView/friends.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/index/index.php" afterPath="$PROJECT_DIR$/view/indexView/index.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/index/indexView.php" afterPath="$PROJECT_DIR$/view/indexView/indexView.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/index/login.php" afterPath="$PROJECT_DIR$/view/indexView/login.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/index/loginView.php" afterPath="$PROJECT_DIR$/view/indexView/loginView.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/index/register.php" afterPath="$PROJECT_DIR$/view/indexView/register.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/message/message.php" afterPath="$PROJECT_DIR$/view/messageView/message.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/personal/fans.php" afterPath="$PROJECT_DIR$/view/personalView/fans.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/personal/focus.php" afterPath="$PROJECT_DIR$/view/personalView/focus.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/personal/personal.php" afterPath="$PROJECT_DIR$/view/personalView/personal.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/personal/personalListView.php" afterPath="$PROJECT_DIR$/view/personalView/personalListView.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/personal/personalView.php" afterPath="$PROJECT_DIR$/view/personalView/personalView.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/personal/user-info.php" afterPath="$PROJECT_DIR$/view/personalView/user-info.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/view/utility/hintView.php" afterPath="$PROJECT_DIR$/view/utilityView/hintView.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/view/resolver.php" afterPath="$PROJECT_DIR$/view/utilityView/resolver.php" />
     </list>
     <ignored path="run_fast.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,41 +33,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="activity.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="activity.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/activityView/activity.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1273">
-              <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
+            <state relative-caret-position="1634">
+              <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activityView.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/activityView/activityView.php">
+      <file leaf-file-name="resolver.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/utilityView/resolver.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resolver.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/resolver.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="friends.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/friendView/friends.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="46" column="64" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+            <state relative-caret-position="171">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -166,10 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/view/personal/user-info.php" />
-        <option value="$PROJECT_DIR$/controller/activity/activityController.php" />
-        <option value="$PROJECT_DIR$/model/authority/authorityModel.php" />
-        <option value="$PROJECT_DIR$/model/activity/activityModel.php" />
         <option value="$PROJECT_DIR$/view/authority/authority.php" />
         <option value="$PROJECT_DIR$/model/personal/FriendModel.php" />
         <option value="$PROJECT_DIR$/model/personal/MessageModel.php" />
@@ -217,6 +146,10 @@
         <option value="$PROJECT_DIR$/view/activity/activity.php" />
         <option value="$PROJECT_DIR$/dataAccess/dataAccess.php" />
         <option value="$PROJECT_DIR$/view/activityView/activity.php" />
+        <option value="$PROJECT_DIR$/view/friendView/friendView.php" />
+        <option value="$PROJECT_DIR$/view/messageView/messageView.php" />
+        <option value="$PROJECT_DIR$/view/messageView/messageSendView.php" />
+        <option value="$PROJECT_DIR$/view/utilityView/resolver.php" />
       </list>
     </option>
   </component>
@@ -277,7 +210,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -296,6 +228,10 @@
               <option name="myItemId" value="run_fast" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -307,12 +243,135 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utilityView" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run_fast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run_fast" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="personalView" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run_fast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run_fast" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="messageView" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run_fast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run_fast" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="friendView" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run_fast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run_fast" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exerciseView" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run_fast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run_fast" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="authorityView" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run_fast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run_fast" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activityView" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run_fast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run_fast" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -326,19 +385,19 @@
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\study\大三\面向web的计算\run_fast\view\utilityView" />
+      <recent name="D:\study\大三\面向web的计算\run_fast\view\message" />
+      <recent name="D:\study\大三\面向web的计算\run_fast\view\friend" />
+      <recent name="D:\study\大三\面向web的计算\run_fast\model\message" />
+      <recent name="D:\study\大三\面向web的计算\run_fast\model\friend" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\study\大三\面向web的计算\run_fast\assets\js" />
       <recent name="D:\study\大三\面向web的计算\run_fast\image" />
       <recent name="D:\study\大三\面向web的计算\run_fast\assets\bootstrap" />
       <recent name="D:\study\大三\面向web的计算\run_fast\assets\js\bootstrap-select\css" />
       <recent name="D:\study\大三\面向web的计算\run_fast\assets\js\bootstrap-select\js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\study\大三\面向web的计算\run_fast\view\message" />
-      <recent name="D:\study\大三\面向web的计算\run_fast\view\friend" />
-      <recent name="D:\study\大三\面向web的计算\run_fast\model\message" />
-      <recent name="D:\study\大三\面向web的计算\run_fast\model\friend" />
-      <recent name="D:\study\大三\面向web的计算\run_fast\controller\message" />
     </key>
   </component>
   <component name="RunManager">
@@ -440,7 +499,9 @@
       <workItem from="1477960339991" duration="4017000" />
       <workItem from="1477966937251" duration="1590000" />
       <workItem from="1477980139369" duration="5641000" />
-      <workItem from="1478008103149" duration="5830000" />
+      <workItem from="1478008103149" duration="6006000" />
+      <workItem from="1478066582993" duration="5000" />
+      <workItem from="1478066731229" duration="1514000" />
     </task>
     <task id="LOCAL-00001" summary="phpstorm test">
       <created>1477963317856</created>
@@ -463,11 +524,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477985447450</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update interfaces">
+      <created>1478019206113</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1478019206113</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238764000" />
+    <option name="totallyTimeSpent" value="240459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -477,7 +545,6 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -490,6 +557,7 @@
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
@@ -509,22 +577,14 @@
     <MESSAGE value="phpstorm test" />
     <MESSAGE value="update model and controller" />
     <MESSAGE value="update interfaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="update interfaces" />
+    <MESSAGE value="update views" />
+    <option name="LAST_COMMIT_MESSAGE" value="update views" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/personal/message.html" />
-    <entry file="file://$PROJECT_DIR$/view/activityView/activity-publish.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2394">
-          <caret line="126" column="6" selection-start-line="126" selection-start-column="6" selection-end-line="126" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/personal/friends.html" />
     <entry file="file://$PROJECT_DIR$/view/personal/fans.html" />
     <entry file="file://$PROJECT_DIR$/view/personalView/fans.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -560,7 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -603,7 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -716,7 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -724,7 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -791,10 +847,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/resolver.php">
+    <entry file="file://$PROJECT_DIR$/dataAccess/dataAccess.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="171">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/activityView/activityView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -831,26 +894,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/activityView/activityView.php">
+    <entry file="file://$PROJECT_DIR$/view/friendView/friendView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        <state relative-caret-position="361">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataAccess/dataAccess.php">
+    <entry file="file://$PROJECT_DIR$/view/messageView/messageSendView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        <state relative-caret-position="228">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/messageView/messageView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/activityView/activity.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1273">
-          <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
+        <state relative-caret-position="1634">
+          <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/utilityView/resolver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
