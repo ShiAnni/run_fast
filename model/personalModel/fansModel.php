@@ -13,4 +13,8 @@ class FansModel extends Model {
     function getFansList($userId) {
 
     }
+
+    function focusUser($userId, $focusId){
+
+    }
 }

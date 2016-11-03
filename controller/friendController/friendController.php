@@ -29,4 +29,8 @@ class FriendController extends Controller {
     function deleteFriend($userId, $friendId){
 
     }
+
+    function sendMessage($message){
+
+    }
 }

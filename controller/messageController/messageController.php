@@ -10,7 +10,7 @@ class MessageController extends Controller {
         $this->model = new MessageModel($view);
     }
 
-    function sendMessage($senderName, $receiverName, $content){
+    function sendMessage($message){
 
     }
 

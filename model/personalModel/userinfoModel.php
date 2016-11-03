@@ -10,27 +10,11 @@ class UserInfoModel extends Model {
         parent::__construct($view);
     }
 
-    function getUserInfo($userId){
-
-    }
-
-    function addFocus($selfId, $userId){
-
-    }
-
-    function removeFocus($selfId, $userId){
-
-    }
-
-    function sendMessage($senderId, $receiverId, $content){
+    function getInfoRight($userId){
 
     }
 
     function addFriend($selfId, $userId){
-
-    }
-
-    function cancelFriend($selfId, $userId){
 
     }
 }

@@ -14,7 +14,7 @@ class DynamicsModel extends Model {
 
     }
 
-    function sendDynamic($userId, $dynamic){
+    function sendDynamic($dynamic){
 
     }
 }

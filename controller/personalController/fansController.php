@@ -14,4 +14,8 @@ class fansController extends Controller {
     function getFansList($userId) {
 
     }
+
+    function focusUser($userId, $focusId){
+
+    }
 }

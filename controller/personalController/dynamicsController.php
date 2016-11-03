@@ -15,7 +15,7 @@ class DynamicsController extends Controller {
 
     }
 
-    function sendDynamic($userId, $dynamic){
+    function sendDynamic($dynamic){
 
     }
 }

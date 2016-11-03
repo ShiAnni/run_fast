@@ -25,4 +25,8 @@ class ActivityModel extends Model {
     function editActivity($activityId, $activity){
 
     }
+
+    function joinActivity($activityId, $userId){
+
+    }
 }

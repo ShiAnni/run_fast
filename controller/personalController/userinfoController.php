@@ -10,6 +10,14 @@ class UserInfoController extends Controller {
         $this->model = new UserInfoController($view);
     }
 
+    function initialize($userId){
+
+    }
+
+    function getInfoRight($userId){
+
+    }
+
     function addFriend($selfId, $userId){
 
     }

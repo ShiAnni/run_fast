@@ -14,4 +14,8 @@ class FocusController extends Controller {
     function getFocusList($userId){
 
     }
+
+    function removeFocus($userId, $focusId) {
+
+    }
 }

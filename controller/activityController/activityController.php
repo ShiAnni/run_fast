@@ -26,4 +26,8 @@ class ActivityController extends Controller {
     function editActivity($activityId, $activity){
 
     }
+
+    function joinActivity($activityId, $userId){
+
+    }
 }

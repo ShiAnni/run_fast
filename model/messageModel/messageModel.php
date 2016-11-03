@@ -10,7 +10,7 @@ class MessageModel extends Model {
         parent::__construct($view);
     }
 
-    function sendMessage($senderName, $receiverName, $content){
+    function sendMessage($message){
 
     }
 

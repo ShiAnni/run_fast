@@ -14,7 +14,7 @@ class PersonalModel extends Model {
 
     }
 
-    function getFocusFansFriendsNum($userId){
+    function getInfoRight($userId){
 
     }
 
@@ -22,11 +22,11 @@ class PersonalModel extends Model {
 
     }
 
-    function focusUser($userId, $focusId){
+    function editPersonalInfo($userId, $personalInfo){
 
     }
 
-    function removeFocus($userId, $focusId) {
+    function updateExperience($userId, $experienceIncrease){
 
     }
 }

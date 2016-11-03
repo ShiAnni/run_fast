@@ -22,19 +22,11 @@ class FriendModel extends Model {
 
     }
 
-    function addFocus($selfId, $userId) {
-
-    }
-
     function removeApply($userId, $applyId){
 
     }
 
     function deleteFriend($userId, $friendId){
-
-    }
-
-    function removeFocus($selfId, $userId) {
 
     }
 }

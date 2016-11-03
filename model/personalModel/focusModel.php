@@ -13,4 +13,8 @@ class FocusModel extends Model {
     function getFocusList($userId) {
 
     }
+
+    function removeFocus($userId, $focusId) {
+
+    }
 }

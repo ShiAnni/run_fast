@@ -18,7 +18,7 @@ class PersonalController extends Controller {
 
     }
 
-    function getFocusFansFriendsNum($userId){
+    function getInfoRight($userId){
 
     }
 
@@ -26,11 +26,11 @@ class PersonalController extends Controller {
 
     }
 
-    function focusUser($userId, $focusId){
+    function editPersonalInfo($userId, $personalInfo){
 
     }
 
-    function removeFocus($userId, $focusId) {
+    function sendMessage($message){
 
     }
 }
