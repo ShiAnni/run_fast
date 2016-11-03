@@ -7,8 +7,10 @@
  */
 require_once ("../View.php");
 class HintView extends View {
-    var $content;
-    function display($content){
+    private $content;
+    private $confirmURL;
+    function display($content, $confirmURL){
         $this->content = $content;
+        $this->confirmURL = $confirmURL;
     }
 }

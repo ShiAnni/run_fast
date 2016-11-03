@@ -11,7 +11,7 @@ class FocusController extends Controller {
         $this->model = new FocusModel();
     }
 
-    function getFocusList($userId) {
+    function getFocusList($userId){
 
     }
 }

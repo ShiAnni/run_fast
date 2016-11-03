@@ -10,22 +10,6 @@ class UserInfoController extends Controller {
         $this->model = new UserInfoController($view);
     }
 
-    function getUserInfo($userId){
-
-    }
-
-    function addFocus($selfId, $userId){
-
-    }
-
-    function removeFocus($selfId, $userId){
-
-    }
-
-    function sendMessage($senderId, $receiverId, $content){
-
-    }
-
     function addFriend($selfId, $userId){
 
     }

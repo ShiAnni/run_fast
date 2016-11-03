@@ -10,11 +10,11 @@ class ExerciseModel extends Model {
         parent::__construct($view);
     }
 
-    function record($userId, $dataType){
+    function record($userId, $data){
 
     }
 
-    function getTodayData($userId, $dataType) {
+    function getTodayData($userId) {
 
     }
 

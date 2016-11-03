@@ -10,6 +10,10 @@ class PersonalController extends Controller {
         $this->model = new PersonalModel($view);
     }
 
+    function initialize($userId){
+
+    }
+
     function getPersonalInfo($userId){
 
     }
