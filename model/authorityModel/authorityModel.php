@@ -18,7 +18,11 @@ class authorityModel extends Model {
 
     }
 
-    function setUserBanned($userId, $isBanned){
+    function ban($userId, $length){
+
+    }
+
+    function release($userId){
 
     }
 

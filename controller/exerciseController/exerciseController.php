@@ -10,7 +10,7 @@ class ExerciseController extends Controller {
         $this->model = new ExerciseModel($view);
     }
 
-    function record($userId, $data){
+    function record($data){
 
     }
 

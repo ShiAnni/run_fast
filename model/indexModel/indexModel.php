@@ -10,19 +10,7 @@ class IndexModel extends Model {
         parent::__construct($view);
     }
 
-    function getNews() {
-
-    }
-
-    function getAnnounces() {
-
-    }
-
-    function getActivities() {
-
-    }
-
-    function getRank(){
+    function initialize(){
 
     }
 

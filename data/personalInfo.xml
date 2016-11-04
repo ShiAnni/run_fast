@@ -1,0 +1,12 @@
+<personalInfo>
+    <userId></userId>
+    <username></username>
+    <face></face>
+    <level></level>
+    <levelName></levelName>
+    <experience></experience>
+    <description></description>
+    <gender></gender>
+    <location></location>
+    <birthday></birthday>
+</personalInfo>

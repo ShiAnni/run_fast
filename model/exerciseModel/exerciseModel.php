@@ -10,7 +10,7 @@ class ExerciseModel extends Model {
         parent::__construct($view);
     }
 
-    function record($userId, $data){
+    function record($data){
 
     }
 

@@ -1,0 +1,10 @@
+<messageListItem>
+    <face></face>
+    <messageId></messageId>
+    <sender></sender>
+    <senderId></senderId>
+    <receiver></receiver>
+    <receiverId></receiverId>
+    <time></time>
+    <content></content>
+</messageListItem>
