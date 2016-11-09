@@ -11,10 +11,17 @@ class BannerView extends View {
     private $personalInfo;
 
     function selectedPage($selected){
-
+        $this->selected = $selected;
     }
 
     function displayPersonal($personalInfo){
 
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSelected(){
+        return $this->selected;
     }
 }

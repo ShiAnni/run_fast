@@ -7,7 +7,7 @@
  */
 require_once ("../View.php");
 class ActivityView extends View {
-    var $content;
+    private $content;
 
     function display($content){
         $this->content = $content;

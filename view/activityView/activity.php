@@ -11,28 +11,9 @@ $view = new ActivityView();
     <link rel="stylesheet" type="text/css" href="../../assets/css/activity.css">
 </head>
 <body>
-<header class="header" role="banner">
-    <div class="container">
-        <img class="head-logo" src="../../image/run_icon-50x50.png">
-        <div class="head-menu">
-            <nav class="head-nav">
-                <a class="nav-item" href="/view/indexindex.html">主页</a>
-                <a class="nav-item" href="/view/exerciseexercise.html">运动数据</a>
-                <a class="nav-item nav-selected" href="/view/activityView/activity-list.html">活动</a>
-            </nav>
-            <div  class="personal-info-header">
-                <div>
-                    <a href="/view/personalpersonal.html">
-                        <div class="info-btn">
-                            <img class="face-img" src="../../image/faceimg.jpg" alt="大清没有完" width="50px" height="50px">
-                            <p class="column">大清没有完</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+<?php
+    include "../utilityView/banner.php";
+?>
 <div role="main">
     <div class="common-columns">
         <div class="content-container common-column activity-nav">
@@ -61,9 +42,6 @@ $view = new ActivityView();
                                 <div><div>活动地点：</div><div class="info-content">南京市玄武湖</div></div>
                                 <div><div>参与人数：</div><div class="info-content"><b>21/50</b></div></div>
                                 <div><div>权限要求：</div><div class="info-content">1级</div></div>&nbsp;
-                                <?php
-                                echo $view->content;
-                                ?>
                             </div>
                         </div>
                     </a>
