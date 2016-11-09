@@ -6,7 +6,7 @@
  * Time: 8:25
  */
 require_once ("bannerView.php");
-$view = new BannerView();
+$bannerView = new BannerView();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,9 +17,9 @@ $view = new BannerView();
         <img class="head-logo" src="../../image/run_icon-50x50.png">
         <div class="head-menu">
             <nav class="head-nav">
-                <a class="nav-item <?php if($view->getSelected() == "index.php"){echo "nav-selected";}  ?>" href="/view/indexindex.html">主页</a>
-                <a class="nav-item <?php if($view->getSelected() == "exercise.php"){echo "nav-selected";}  ?>" href="/view/exerciseexercise.html">运动数据</a>
-                <a class="nav-item <?php if($view->getSelected() == "activity.php"){echo "nav-selected";}  ?>" href="/view/activityView/activity-list.html">活动</a>
+                <a class="nav-item <?php if($bannerView->getSelected() == "index.php"){echo "nav-selected";}  ?>" href="/view/indexindex.html">主页</a>
+                <a class="nav-item <?php if($bannerView->getSelected() == "exercise.php"){echo "nav-selected";}  ?>" href="/view/exerciseexercise.html">运动数据</a>
+                <a class="nav-item <?php if($bannerView->getSelected() == "activity.php"){echo "nav-selected";}  ?>" href="/view/activityView/activity-list.html">活动</a>
             </nav>
             <div  class="personal-info-header">
                 <div>
