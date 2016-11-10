@@ -19,12 +19,12 @@ $view = new ActivityView();
         <div class="content-container common-column activity-nav">
             <div class="activity-aside">
                 <a  href="/view/activityView/activity-list.html">
-                    <div class="activity-nav-item activity-first <?php ?>">
+                    <div class="activity-nav-item activity-first <?php if($view->getContent() == "activity-list.php"){echo "activity-selected";} ?>">
                         活动列表
                     </div>
                 </a>
                 <a href="/view/activityView/activity-publish.html">
-                    <div class="activity-nav-item activity-selected">
+                    <div class="activity-nav-item <?php if($view->getContent() == "activity-publish.php"){echo "activity-selected";} ?>">
                         发布活动
                     </div>
                 </a>

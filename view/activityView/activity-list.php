@@ -5,12 +5,12 @@
  * Date: 2016/11/9
  * Time: 15:09
  */
+require_once ("activityinfoView.php");
+$infoView = new ActivityInfoView();
 ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <body>
-<link rel="stylesheet" type="text/css" href="../../assets/css/common.css">
-<link rel="stylesheet" type="text/css" href="../../assets/css/activity.css">
 <div class="activity-content common-column content-first">
     <div class="activity-list">
         <div class="activity-list-item common-columns">
@@ -47,5 +47,4 @@
     </div>
 </div>
 </body>
-
 </html>

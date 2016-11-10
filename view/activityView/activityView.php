@@ -13,11 +13,7 @@ class ActivityView extends View {
         $this->content = $content;
     }
 
-    /**
-     * @return string
-     */
-    public function getContent(): string
-    {
+    public function getContent() {
         return $this->content;
     }
 }
