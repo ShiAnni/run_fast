@@ -2,9 +2,6 @@
 require_once ("activityinfoView.php");
 $infoView = new ActivityInfoView();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<body>
 <link rel="stylesheet" type="text/css" href="../../assets/css/activity-info.css">
 <div class="common-column content activity-info-content content-first">
     <div class="activity-info-item common-columns">
@@ -34,5 +31,3 @@ $infoView = new ActivityInfoView();
         <a class="btn-right custom-btn plane-colored-btn" href="/edit_activity?activity_id=1">编辑活动</a>
     </div>
 </div>
-</body>
-</html>

@@ -8,9 +8,6 @@
 require_once ("activityinfoView.php");
 $infoView = new ActivityInfoView();
 ?>
-<!DOCTYPE html>
-<html lang="zh-cn">
-<body>
 <div class="activity-content common-column content-first">
     <div class="activity-list">
         <div class="activity-list-item common-columns">
@@ -46,5 +43,3 @@ $infoView = new ActivityInfoView();
         </div>
     </div>
 </div>
-</body>
-</html>

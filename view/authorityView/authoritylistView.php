@@ -6,7 +6,7 @@
  * Time: 14:40
  */
 class AuthorityListView extends View {
-    var $list;
+    private $list;
 
     function displayUserList($list){
 
@@ -14,5 +14,13 @@ class AuthorityListView extends View {
 
     function displayBannedList($list){
 
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getList()
+    {
+        return $this->list;
     }
 }
