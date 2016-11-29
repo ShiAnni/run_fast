@@ -5,5 +5,10 @@
       <BehatSettings behat_path="$PROJECT_DIR$" />
     </behat_settings>
   </component>
+  <component name="PhpInterpreters">
+    <interpreters>
+      <interpreter home="D:\softwares\php\php.exe" id="d5336ae3-426e-4798-906e-3586622a16b8" name="Interpreter for Composer" debugger_id="php.debugger.XDebug" />
+    </interpreters>
+  </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7" />
 </project>

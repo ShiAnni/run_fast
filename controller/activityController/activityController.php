@@ -12,22 +12,22 @@ class ActivityController extends Controller {
     }
 
     function checkActivity($activityId){
-
+        $this->model->checkActivity($activityId);
     }
 
     function publishActivity($activity){
-
+        $this->model->addActivity($activity);
     }
 
     function activityList() {
-
+        $this->model->activityList();
     }
 
     function editActivity($activityId, $activity){
-
+        $this->model->editActivity($activityId,$activity);
     }
 
     function joinActivity($activityId, $userId){
-
+        $this->model->joinActivity($activityId,$userId);
     }
 }

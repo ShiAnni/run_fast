@@ -1,3 +1,7 @@
+<?php
+require_once ("exerciseView.php");
+$view = new ExerciseView();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,48 +22,51 @@
     <script type="text/javascript">
         $(function () {
             $('#chart').highcharts({
-                chart: {
-                    type: 'column'
-                },
-                title: {
-                    text: '上周每日步数'
-                },
-                xAxis: {
-                    categories: [
-                        '10.10',
-                        '10.11',
-                        '10.12',
-                        '10.13',
-                        '10.14',
-                        '10.15',
-                        '10.16'
-                    ],
-                    crosshair: true
-                },
-                yAxis: {
-                    min: 0,
-                    title: {
-                        text: '步数'
-                    }
-                },
-                tooltip: {
-                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                    '<td style="padding:0"><b>{point.y:.0f}步</b></td></tr>',
-                    footerFormat: '</table>',
-                    shared: true,
-                    useHTML: true
-                },
-                plotOptions: {
-                    column: {
-                        pointPadding: 0.2,
-                        borderWidth: 0
-                    }
-                },
-                series: [{
-                    name: '步数',
-                    data: [2412, 3413, 12311, 2341, 6455, 9867, 1231]
-                }]
+                <?php
+                    echo $view->getStatistics();
+                ?>
+//                chart: {
+//                    type: 'column'
+//                },
+//                title: {
+//                    text: '上周每日步数'
+//                },
+//                xAxis: {
+//                    categories: [
+//                        '10.10',
+//                        '10.11',
+//                        '10.12',
+//                        '10.13',
+//                        '10.14',
+//                        '10.15',
+//                        '10.16'
+//                    ],
+//                    crosshair: true
+//                },
+//                yAxis: {
+//                    min: 0,
+//                    title: {
+//                        text: '步数'
+//                    }
+//                },
+//                tooltip: {
+//                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+//                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+//                    '<td style="padding:0"><b>{point.y:.0f}步</b></td></tr>',
+//                    footerFormat: '</table>',
+//                    shared: true,
+//                    useHTML: true
+//                },
+//                plotOptions: {
+//                    column: {
+//                        pointPadding: 0.2,
+//                        borderWidth: 0
+//                    }
+//                },
+//                series: [{
+//                    name: '步数',
+//                    data: [2412, 3413, 12311, 2341, 6455, 9867, 1231]
+//                }]
             });
         });
     </script>
@@ -88,28 +95,7 @@
     </script>
 </head>
 <body>
-<header class="header" role="banner">
-    <div class="container">
-        <img class="head-logo" src="../../image/run_icon-50x50.png">
-        <div class="head-menu">
-            <nav class="head-nav">
-                <a class="nav-item" href="/login">主页</a>
-                <a class="nav-item nav-selected" href="/data">运动数据</a>
-                <a class="nav-item" href="/activity">活动</a>
-            </nav>
-        </div>
-        <div  class="personal-info-header">
-            <div>
-                <a href="/personal/da-qing-mei-you-wan">
-                    <div class="info-btn">
-                        <img class="face-img" src="../../image/faceimg.jpg" alt="大清没有完" width="50px" height="50px">
-                        <p class="column">大清没有完</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</header>
+<?php include "../utilityView/banner.php" ?>
 <div role="main">
     <div class="container content-first">
         <div class="common-columns exercise-data content">
@@ -117,7 +103,7 @@
                 <img class="exercise-icon" src="../../image/shoe.png" alt="shoe" width="100px" height="100px">
                 <div class="common-columns exercise-info">
                     <div class="common-column">今日步数：</div>
-                    <div class="common-column exercise-num">12392步</div>
+                    <div class="common-column exercise-num"><?php echo $view->getWalkNum() ?></div>
                 </div>
                 <a class="plane-colored-btn btn row-btn" href="/data/walk">记录数据</a>
             </div>
@@ -125,11 +111,11 @@
                 <img src="../../image/walking.png" alt="walk" width="100px" height="100px">
                 <div class="common-columns exercise-info">
                     <div class="common-column">今日健走距离：</div>
-                    <div class="common-column exercise-num">3.1km</div>
+                    <div class="common-column exercise-num"><?php echo $view->getBriskDis() ?></div>
                 </div>
                 <div class="common-columns exercise-info">
                     <div class="common-column">今日健走速度：</div>
-                    <div class="common-column exercise-num">5.2km/h</div>
+                    <div class="common-column exercise-num"><?php echo $view->getBriskVelocity() ?></div>
                 </div>
                 <a class="plane-colored-btn btn" href="/data/brisk">记录数据</a>
             </div>
@@ -137,11 +123,11 @@
                 <img src="../../image/running.png" alt="run" width="100px" height="100px">
                 <div class="common-columns exercise-info">
                     <div class="common-column">今日跑步距离：</div>
-                    <div class="common-column exercise-num">4.0km</div>
+                    <div class="common-column exercise-num"><?php echo $view->getRunDis() ?></div>
                 </div>
                 <div class="common-columns exercise-info">
                     <div class="common-column">今日跑步速度：</div>
-                    <div class="common-column exercise-num">12km/h</div>
+                    <div class="common-column exercise-num"><?php echo $view->getRunVelocity() ?></div>
                 </div>
                 <a class="plane-colored-btn btn" href="/data/brisk">记录数据</a>
             </div>
@@ -151,7 +137,7 @@
                 <img src="../../image/ruler.png" alt="ruler" width="100px" height="100px">
                 <div class="common-columns exercise-info">
                     <div class="common-column">身高：</div>
-                    <div class="common-column exercise-num">1.75m</div>
+                    <div class="common-column exercise-num"><?php echo $view->getHeight() ?></div>
                 </div>
                 <a class="plane-colored-btn btn" href="/data/walk">记录数据</a>
             </div>
@@ -159,7 +145,7 @@
                 <img src="../../image/scales.png" alt="scales" width="100px" height="100px">
                 <div class="common-columns exercise-info">
                     <div class="common-column">体重：</div>
-                    <div class="common-column exercise-num">65kg</div>
+                    <div class="common-column exercise-num"><?php echo $view->getWeight() ?></div>
                 </div>
                 <a class="plane-colored-btn btn" href="/data/brisk">记录数据</a>
             </div>
@@ -167,7 +153,7 @@
                 <img src="../../image/glass.png" alt="glass" width="100px" height="100px">
                 <div class="common-columns exercise-info">
                     <div class="common-column">今日饮水量：</div>
-                    <div class="common-column exercise-num">2杯（500ml）</div>
+                    <div class="common-column exercise-num"><?php echo $view->getWater() ?></div>
                 </div>
                 <a class="plane-colored-btn btn" href="/data/brisk">记录数据</a>
             </div>

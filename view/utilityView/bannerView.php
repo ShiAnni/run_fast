@@ -9,6 +9,8 @@ require_once ("../View.php");
 class BannerView extends View {
     private $selected;
     private $personalInfo;
+    private $face;
+    private $name;
 
     function selectedPage($selected){
         $this->selected = $selected;
@@ -24,4 +26,21 @@ class BannerView extends View {
     public function getSelected(){
         return $this->selected;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getFace()
+    {
+        return $this->face;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
 }

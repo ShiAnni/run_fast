@@ -7,22 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../../assets/css/index.css">
 </head>
 <body>
-<header class="header" role="banner">
-    <div class="container">
-        <img class="head-logo" src="../../image/run_icon-50x50.png">
-        <div class="head-menu">
-            <nav class="head-nav">
-                <a class="nav-item nav-selected" href="/view/indexView/index.html">主页</a>
-                <a class="nav-item" href="/data">运动数据</a>
-                <a class="nav-item" href="/activity">活动</a>
-            </nav>
-            <div class="head-actions">
-                <a class="custom-btn head-btn colored-btn" href="login.html">登录</a>
-                <a class="custom-btn head-btn register-btn" href="register.html">注册</a>
-            </div>
-        </div>
-    </div>
-</header>
+<?php include "../utilityView/banner.php" ?>
 <div role="main">
     <div class="common-columns index-row">
         <div class="announcement common-column content content-first index-item item-left">

@@ -1,3 +1,7 @@
+<?php
+require ("friendView.php");
+$view = new FriendView();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,26 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../assets/css/friend.css">
 </head>
 <body>
-<header class="header" role="banner">
-    <div class="container">
-        <img class="head-logo" src="../../image/run_icon-50x50.png">
-        <div class="head-menu">
-            <nav class="head-nav">
-                <a class="nav-item" href="/login">主页</a>
-                <a class="nav-item" href="/data">运动数据</a>
-                <a class="nav-item" href="/activity">活动</a>
-            </nav>
-        </div>
-        <a href="/personal/da-qing-mei-you-wan">
-            <div  class="personal-info-header">
-                <div class="info-btn">
-                    <img class="face-img" src="../../image/faceimg.jpg" alt="大清没有完">
-                    <p class="column">大清没有完</p>
-                </div>
-            </div>
-        </a>
-    </div>
-</header>
+<?php include "../utilityView/banner.php" ?>
 <div role="main">
     <div class="common-columns">
         <div class="content content-first friend-list common-column">
