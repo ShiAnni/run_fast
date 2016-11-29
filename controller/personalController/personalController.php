@@ -11,26 +11,30 @@ class PersonalController extends Controller {
     }
 
     function initialize($userId){
-
+        $this->getPersonalInfo($userId);
+        $this->getInfoRight($userId);
+        $this->getMessageInfo($userId);
     }
 
     function getPersonalInfo($userId){
-
+        $this->model->getPersonalInfo($userId);
     }
 
     function getInfoRight($userId){
-
+        $this->model->getInfoRight($userId);
     }
 
     function getMessageInfo($userId){
-
+        $this->model->getMessageInfo($userId);
     }
 
     function editPersonalInfo($userId, $personalInfo){
-
+        $this->model->editPersonalInfo($userId,$personalInfo);
     }
 
     function sendMessage($message){
-
+        require ("../../model/messageModel/messageModel.php");
+        $messageModel = new MessageModel();
+        $messageModel->sendMessage($message);
     }
 }

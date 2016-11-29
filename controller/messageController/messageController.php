@@ -11,18 +11,18 @@ class MessageController extends Controller {
     }
 
     function sendMessage($message){
-
+        $this->model->sendMessage($message);
     }
 
     function getMessageList($userId){
-
+        $this->model->getMessageList($userId);
     }
 
     function deleteMessage($messageId){
-
+        $this->model->deleteMessage($messageId);
     }
 
     function checkMessage($messageId) {
-
+        $this->model->checkMessage($messageId);
     }
 }

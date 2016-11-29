@@ -12,10 +12,10 @@ class FocusController extends Controller {
     }
 
     function getFocusList($userId){
-
+        $this->model->getFocusList($userId);
     }
 
     function removeFocus($userId, $focusId) {
-
+        $this->model->removeFocus($userId,$focusId);
     }
 }

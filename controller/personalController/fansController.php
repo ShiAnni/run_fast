@@ -12,10 +12,10 @@ class fansController extends Controller {
     }
 
     function getFansList($userId) {
-
+        $this->model->getFansList($userId);
     }
 
     function focusUser($userId, $focusId){
-
+        $this->model->focusUser($userId, $focusId);
     }
 }

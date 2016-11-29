@@ -11,14 +11,14 @@ class IndexController extends Controller {
     }
 
     function initialize(){
-
+        $this->model->initialize();
     }
 
     function login($username, $password) {
-
+        $this->model->login($username,$password);
     }
 
     function register($username, $password){
-
+        $this->model->register($username,$password);
     }
 }

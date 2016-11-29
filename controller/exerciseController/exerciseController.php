@@ -11,14 +11,14 @@ class ExerciseController extends Controller {
     }
 
     function record($data){
-
+        $this->model->record($data);
     }
 
     function getTodayData($userId) {
-
+        $this->model->getTodayData($userId);
     }
 
     function getStatistics($userId, $dataType, $statisticType, $startTime, $endTime){
-
+        $this->model->getStatistics($userId,$dataType.$statisticType.$startTime,$endTime);
     }
 }

@@ -12,10 +12,10 @@ class DynamicsController extends Controller {
     }
 
     function getDynamics($userId) {
-
+        $this->model->getDynamics($userId);
     }
 
     function sendDynamic($dynamic){
-
+        $this->model->sendDynamic($dynamic);
     }
 }
