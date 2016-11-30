@@ -6,15 +6,15 @@
  * Time: 8:25
  */
 require_once ("bannerView.php");
-$bannerView = new BannerView();
+$bannerView = BannerView::getBanner();
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<link rel="stylesheet" type="text/css" href="../../assets/css/common.css">
+<link rel="stylesheet" type="text/css" href="/../../assets/css/common.css">
 <header class="header" role="banner">
     <div class="container">
-        <img class="head-logo" src="../../image/run_icon-50x50.png">
+        <img class="head-logo" src="/../../image/run_icon-50x50.png">
         <div class="head-menu">
             <nav class="head-nav">
                 <a class="nav-item <?php if($bannerView->getSelected() == "index.php"){echo "nav-selected";}  ?>" href="/view/index.html">主页</a>

@@ -5,6 +5,7 @@
  * Date: 2016/11/1
  * Time: 14:36
  */
+require_once (dirname(__FILE__)."/../View.php");
 class ActivityInfoView extends View {
     private $info;
     private $name;

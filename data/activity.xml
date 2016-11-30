@@ -1,10 +1,13 @@
 <activity>
+    <id></id>
     <name></name>
     <description></description>
+    <publisherId></publisherId>
     <publisher></publisher>
     <participate></participate>
     <upper></upper>
     <startDate></startDate>
     <endDate></endDate>
+    <location></location>
     <limit></limit>
 </activity>

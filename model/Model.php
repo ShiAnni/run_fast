@@ -5,9 +5,10 @@
  * Date: 2016/10/28
  * Time: 11:05
  */
+require_once (dirname(__FILE__)."/../dataAccess/dataAccess.php");
 class Model {
-    protected $view;
-    function __construct($view){
-        $this->view = $view;
+    protected $dataAccess;
+    function __construct(){
+        $this->dataAccess = DataAccess::getDataAccess();
     }
 }

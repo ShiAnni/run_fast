@@ -7,14 +7,14 @@
  */
 class DataAccess {
     static private $dataAccess = null;
-    private $db;
+    private $sqlite;
 
     private function __construct(){
-        $this->db = sqlite_open("../runfast.db");
+        $this->sqlite = new SQLite3(dirname(__FILE__)."/../runfast.db");
     }
 
     function __destruct(){
-        sqlite_close($this->db);
+        $this->sqlite->close();
     }
 
     static function getDataAccess(){
@@ -25,7 +25,7 @@ class DataAccess {
     }
 
     function executeSQL($sql){
-        $result = sqlite_query($this->db, $sql);
+        $result = $this->sqlite->query($sql);
         return $result;
     }
 }

@@ -5,29 +5,30 @@
  * Date: 2016/10/27
  * Time: 23:53
  */
+require_once (dirname(__FILE__)."/../Controller.php");
+require_once (dirname(__FILE__)."/../../model/activityModel/activityModel.php");
 class ActivityController extends Controller {
-    function __construct($view) {
-        require("../../model/activityModel/activityModel.php");
-        $this->model = new ActivityModel($view);
+    function __construct() {
+        $this->model = new ActivityModel();
     }
 
-    function checkActivity($activityId){
-        $this->model->checkActivity($activityId);
+    function activities($activityId=null){
+        if (is_null($activityId)){
+            return $this->model->activityList();
+        } else {
+            return $this->model->checkActivity($activityId);
+        }
     }
 
-    function publishActivity($activity){
-        $this->model->addActivity($activity);
+    function edit($activityId, $activity){
+        return $this->model->editActivity($activityId,$activity);
     }
 
-    function activityList() {
-        $this->model->activityList();
+    function delete($activityId){
+        return $this->model->deleteActivity($activityId);
     }
 
-    function editActivity($activityId, $activity){
-        $this->model->editActivity($activityId,$activity);
-    }
-
-    function joinActivity($activityId, $userId){
-        $this->model->joinActivity($activityId,$userId);
+    function join($activityId, $userId){
+        return $this->model->joinActivity($activityId,$userId);
     }
 }

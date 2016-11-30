@@ -5,7 +5,7 @@
  * Date: 2016/11/1
  * Time: 14:43
  */
-require_once ("../View.php");
+require (dirname(__FILE__)."/../View.php");
 class HintView extends View {
     private $content;
     private $confirmURL;
