@@ -9,17 +9,17 @@ class ActivityFactory {
     static function createActivity($row){
         $xml = new DOMDocument();
         $xml->load(dirname(__FILE__)."/../../data/activity.xml");
-        $xml->getElementById("id")->nodeValue = $row['id'];
-        $xml->getElementById("name")->nodeValue = $row['name'];
-        $xml->getElementById("description")->nodeValue = $row['description'];
-        $xml->getElementById("publisherId")->nodeValue = $row['publisherId'];
-        $xml->getElementById("publisher")->nodeValue = $row['publisher'];
-        $xml->getElementById("participate")->nodeValue = $row['participate'];
-        $xml->getElementById("upper")->nodeValue = $row['upper'];
-        $xml->getElementById("startDate")->nodeValue = $row['startDate'];
-        $xml->getElementById("endDate")->nodeValue = $row['endDate'];
-        $xml->getElementById("location")->nodeValue = $row['location'];
-        $xml->getElementById("limit")->nodeValue = $row['levelLimit']."级";
+        $xml->getElementsByTagName("id")[0]->nodeValue = $row['id'];
+        $xml->getElementsByTagName("name")[0]->nodeValue = $row['name'];
+        $xml->getElementsByTagName("description")[0]->nodeValue = $row['description'];
+        $xml->getElementsByTagName("publisherId")[0]->nodeValue = $row['publisherId'];
+        $xml->getElementsByTagName("publisher")[0]->nodeValue = $row['publisher'];
+        $xml->getElementsByTagName("participate")[0]->nodeValue = $row['participate'];
+        $xml->getElementsByTagName("upper")[0]->nodeValue = $row['upper'];
+        $xml->getElementsByTagName("startDate")[0]->nodeValue = $row['startDate'];
+        $xml->getElementsByTagName("endDate")[0]->nodeValue = $row['endDate'];
+        $xml->getElementsByTagName("location")[0]->nodeValue = $row['location'];
+        $xml->getElementsByTagName("limit")[0]->nodeValue = $row['levelLimit']."级";
         return $xml;
     }
 }

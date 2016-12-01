@@ -8,11 +8,6 @@
 require_once (dirname(__FILE__)."/../View.php");
 class ActivityListView extends View {
     private $list;
-    function display($list){
-        foreach ($list->children() as $child){
-
-        }
-    }
 
     /**
      * @return mixed

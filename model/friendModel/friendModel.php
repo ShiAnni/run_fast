@@ -5,9 +5,10 @@
  * Date: 2016/10/29
  * Time: 21:13
  */
+require_once (dirname(__FILE__)."/../Model.php");
 class FriendModel extends Model {
-    function __construct($view) {
-        parent::__construct($view);
+    function __construct() {
+        parent::__construct();
     }
 
     function friendList($userId, $keyword){

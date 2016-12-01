@@ -1,5 +1,5 @@
 <?php
-require_once ("exerciseView.php");
+require_once("exerciseView.php");
 $view = new ExerciseView();
 ?>
 <!DOCTYPE html>
@@ -7,16 +7,16 @@ $view = new ExerciseView();
 <head>
     <meta charset="UTF-8">
     <title>跑得快 - 运动数据</title>
-    <link rel="stylesheet" type="text/css" href="../../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../../assets/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" type="text/css" href="../../assets/bootstrap-select/css/bootstrap-select.min.css">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/common.css">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/exercise.css">
-    <script type="text/javascript" src="../../assets/js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="../../assets/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
-    <script type="text/javascript" src="../../assets/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
-    <script type="text/javascript" src="../../assets/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-select/css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/exercise.css">
+    <script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-select/js/bootstrap-select.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
 
     <script type="text/javascript">
@@ -100,7 +100,7 @@ $view = new ExerciseView();
     <div class="container content-first">
         <div class="common-columns exercise-data content">
             <div class="exercise-item">
-                <img class="exercise-icon" src="../../image/shoe.png" alt="shoe" width="100px" height="100px">
+                <img class="exercise-icon" src="image/shoe.png" alt="shoe" width="100px" height="100px">
                 <div class="common-columns exercise-info">
                     <div class="common-column">今日步数：</div>
                     <div class="common-column exercise-num"><?php echo $view->getWalkNum() ?></div>
@@ -108,7 +108,7 @@ $view = new ExerciseView();
                 <a class="plane-colored-btn btn row-btn" href="/data/walk">记录数据</a>
             </div>
             <div class="exercise-item">
-                <img src="../../image/walking.png" alt="walk" width="100px" height="100px">
+                <img src="image/walking.png" alt="walk" width="100px" height="100px">
                 <div class="common-columns exercise-info">
                     <div class="common-column">今日健走距离：</div>
                     <div class="common-column exercise-num"><?php echo $view->getBriskDis() ?></div>
@@ -120,7 +120,7 @@ $view = new ExerciseView();
                 <a class="plane-colored-btn btn" href="/data/brisk">记录数据</a>
             </div>
             <div class="exercise-item">
-                <img src="../../image/running.png" alt="run" width="100px" height="100px">
+                <img src="image/running.png" alt="run" width="100px" height="100px">
                 <div class="common-columns exercise-info">
                     <div class="common-column">今日跑步距离：</div>
                     <div class="common-column exercise-num"><?php echo $view->getRunDis() ?></div>
@@ -134,7 +134,7 @@ $view = new ExerciseView();
         </div>
         <div class="health-data health-data content common-columns">
             <div class="health-item height">
-                <img src="../../image/ruler.png" alt="ruler" width="100px" height="100px">
+                <img src="image/ruler.png" alt="ruler" width="100px" height="100px">
                 <div class="common-columns exercise-info">
                     <div class="common-column">身高：</div>
                     <div class="common-column exercise-num"><?php echo $view->getHeight() ?></div>
@@ -142,7 +142,7 @@ $view = new ExerciseView();
                 <a class="plane-colored-btn btn" href="/data/walk">记录数据</a>
             </div>
             <div class="health-item weight">
-                <img src="../../image/scales.png" alt="scales" width="100px" height="100px">
+                <img src="image/scales.png" alt="scales" width="100px" height="100px">
                 <div class="common-columns exercise-info">
                     <div class="common-column">体重：</div>
                     <div class="common-column exercise-num"><?php echo $view->getWeight() ?></div>
@@ -150,7 +150,7 @@ $view = new ExerciseView();
                 <a class="plane-colored-btn btn" href="/data/brisk">记录数据</a>
             </div>
             <div class="health-item water">
-                <img src="../../image/glass.png" alt="glass" width="100px" height="100px">
+                <img src="image/glass.png" alt="glass" width="100px" height="100px">
                 <div class="common-columns exercise-info">
                     <div class="common-column">今日饮水量：</div>
                     <div class="common-column exercise-num"><?php echo $view->getWater() ?></div>

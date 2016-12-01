@@ -12,10 +12,14 @@ class BannerView extends View {
     private $personalInfo;
     private $face;
     private $name;
+    private $id;
 
     private function __construct()
     {
-
+        $this->selected = "activity.php";
+        $this->face = "/image/faceimg.jpg";
+        $this->name = "大清没有完";
+        $this->id = 0;
     }
 
     static function getBanner(){
@@ -27,10 +31,6 @@ class BannerView extends View {
 
     function selectedPage($selected){
         $this->selected = $selected;
-    }
-
-    function displayPersonal($personalInfo){
-
     }
 
     /**
@@ -54,6 +54,46 @@ class BannerView extends View {
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param string $selected
+     */
+    public function setSelected(string $selected)
+    {
+        $this->selected = $selected;
+    }
+
+    /**
+     * @param mixed $face
+     */
+    public function setFace($face)
+    {
+        $this->face = $face;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id)
+    {
+        $this->id = $id;
     }
 
 }

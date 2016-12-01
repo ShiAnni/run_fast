@@ -6,7 +6,7 @@
  * Time: 20:00
  */
 class Resolver {
-    static function resolve($url, $namespace){
+    static function resolve($url, $namespace, $data){
 
     }
 }

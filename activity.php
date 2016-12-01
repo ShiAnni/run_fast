@@ -3,22 +3,34 @@ require(dirname(__FILE__)."/view/activityView/activityView.php");
 $view = new ActivityView();
 $uri = $_SERVER['REQUEST_URI'];
 $arr = explode("/", $uri);
-switch ($arr[1]){
-    case "activity":
-        if (!is_null($arr[2])){
-
-        } else {
-            $view->setTag("activity-list");
-            $view->setContent("view/activityView/activity-list.php");
-        }
-        break;
-    case "publish":
-        $view->setTag("activity-publish");
-        $view->setContent("view/activityView/activity-publish.php");
-        break;
+require_once (dirname(__FILE__)."/controller/activityController/activityController.php");
+require_once (dirname(__FILE__)."/view/utilityView/bannerView.php");
+$controller = new ActivityController();
+if (count($arr) > 2){
+    switch ($arr[2]){
+        case "activity":
+            if (count($arr) > 3){
+                if (preg_match("/[0-9]+/",$arr[3])){
+                    $view->setTag("activity-info");
+                    $view->setContent("view/activityView/activity-info.php");
+                } else if ($arr[3] == "delete"){
+                    $controller->delete($arr[4]);
+                    header("/activity.php/activity");
+                } else if ($arr[3] == "join"){
+                    $controller->join($arr[4], BannerView::getBanner()->getId());
+                    header("/activity.php/activity");
+                }
+            } else {
+                $view->setTag("activity-list");
+                $view->setContent("view/activityView/activity-list.php");
+            }
+            break;
+        case "publish":
+            $view->setTag("activity-publish");
+            $view->setContent("view/activityView/activity-publish.php");
+            break;
+    }
 }
-parse_str($_SERVER["QUERY_STRING"],$param);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +39,7 @@ parse_str($_SERVER["QUERY_STRING"],$param);
     <title>跑得快 - 活动</title>
     <link rel="stylesheet" type="text/css" href="/assets/css/common.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/activity.css">
+    <script type="text/javascript" src="/assets/js/jquery-3.1.1.min.js"></script>
 </head>
 <body>
 <?php

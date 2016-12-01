@@ -16,22 +16,26 @@ class ActivityModel extends Model {
         $result = $this->dataAccess->executeSQL("SELECT * FROM activity WHERE id = ".$activityId);
         $row = $result->fetchArray(SQLITE3_ASSOC);
         $xml = ActivityFactory::createActivity($row);
-        return $xml;
+        return simplexml_import_dom($xml);
     }
 
     function addActivity($activity){
-        $id = $activity->id[0];
         $name = $activity->name[0];
         $description = $activity->description[0];
         $publisher = $activity->publisher[0];
         $publisherId = $activity->publisherId[0];
         $participate = $activity->participate[0];
         $upper = $activity->upper[0];
+        echo $activity->upper[0];
         $startDate = $activity->startDate[0];
         $endDate = $activity->endDate[0];
+        $location = $activity->location[0];
         $levelLimit = $activity->limit[0];
-        $result = $this->dataAccess->executeSQL("INSERT INTO activity VALUES(".$id.",'".$name."','".$description."','".$publisher."',".$publisherId.
-            ",".$participate.",".$upper.",".$startDate.",".$endDate.",".$levelLimit.");");
+        $this->dataAccess->executeSQL("INSERT INTO activity (name, description, publisher, publisherId, participate, upper, startDate, endDate, location,levelLimit) 
+            VALUES('".$name."','".$description."','".$publisher."',".$publisherId.
+            ",".$participate.",".$upper.",'".$startDate."','".$endDate."','".$location."',".$levelLimit.");");
+        $id = $this->dataAccess->executeSQL("SELECT id FROM activity WHERE name = '".$name."';")->fetchArray();
+        $result = $this->dataAccess->executeSQL("INSERT INTO participate VALUES (".$publisherId.",".$id["id"].");");
         return $result;
     }
 
@@ -46,7 +50,7 @@ XML;
         $xmlList->loadXML($xmlStr);
         for ($i = 0;$row = $result->fetchArray(SQLITE3_ASSOC);$i++) {
             $value = ActivityFactory::createActivity($row);
-            $xmlList->appendChild($value);
+            $xmlList->getElementsByTagName("activityList")[0]->appendChild($xmlList->importNode($value->getElementsByTagName("activity")[0],true));
         }
         return simplexml_import_dom($xmlList);
     }
@@ -70,22 +74,24 @@ XML;
     }
 
     function joinActivity($activityId, $userId){
-        $result = $this->dataAccess->executeSQL("INSERT INTO participate VALUES(".$userId.",".$activityId.");");
-        if (!$result){
-            $this->view->error("参加活动失败！");
+        $res = $this->dataAccess->executeSQL("SELECT * FROM participate WHERE userId=".$userId." AND activityId=".$activityId.";")->fetchArray();
+        if ($res == false){
+            $result = $this->dataAccess->executeSQL("INSERT INTO participate VALUES(".$userId.",".$activityId.");");
+            if($result){
+                $this->dataAccess->executeSQL("UPDATE activity SET participate=participate+1 WHERE id=".$activityId.";");
+            }
+            return $result;
         } else {
-            $this->dataAccess->executeSQL("UPDATE activity SET participate=particpate+1;");
+            return false;
         }
-        return $result;
     }
 
     function deleteActivity($activityId){
         $result = $this->dataAccess->executeSQL("DELETE FROM activity WHERE id=".$activityId.";");
-        if (!$result){
-            $this->view->error("删除活动失败！");
-        } else {
+        if ($result){
             $this->dataAccess->executeSQL("DELETE FROM participate WHERE activityId=".$activityId.";");
         }
+
         return $result;
     }
 }

@@ -1,5 +1,5 @@
 .activity-publish {
-    width: 50%;
+    width: 65%;
     margin-top: 20px;
     padding-left: 20px;
 }
@@ -7,14 +7,14 @@
     margin-bottom: 20px;
 }
 .activity-text {
-    width: 200px;
+    width: 270px;
 }
 .activity-text-small {
     width: 100px;
     margin-right: 20px;
 }
 .activity-textarea {
-    width: 400px;
+    width: 500px;
     height: 300px;
 }
 .publish-btn {

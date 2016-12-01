@@ -17,13 +17,13 @@ $bannerView = BannerView::getBanner();
         <img class="head-logo" src="/../../image/run_icon-50x50.png">
         <div class="head-menu">
             <nav class="head-nav">
-                <a class="nav-item <?php if($bannerView->getSelected() == "index.php"){echo "nav-selected";}  ?>" href="/view/index.html">主页</a>
-                <a class="nav-item <?php if($bannerView->getSelected() == "exercise.php"){echo "nav-selected";}  ?>" href="/view/xercise.html">运动数据</a>
-                <a class="nav-item <?php if($bannerView->getSelected() == "activity.php"){echo "nav-selected";}  ?>" href="/view/activityView/activity-list.html">活动</a>
+                <a class="nav-item <?php if($bannerView->getSelected() == "index.php"){echo "nav-selected";}  ?>" href="/index.php">主页</a>
+                <a class="nav-item <?php if($bannerView->getSelected() == "exercise.php"){echo "nav-selected";}  ?>" href="/exercise.php">运动数据</a>
+                <a class="nav-item <?php if($bannerView->getSelected() == "activity.php"){echo "nav-selected";}  ?>" href="/activity.php">活动</a>
             </nav>
             <div  class="personal-info-header">
                 <div>
-                    <a href="/view/personalpersonal.html">
+                    <a href="/view/personal.html">
                         <div class="info-btn">
                             <img class="face-img" src="<?php echo $bannerView->getFace()?>" alt="<?php echo $bannerView->getName()?>" width="50px" height="50px">
                             <p class="column"><?php echo $bannerView->getName()?></p>

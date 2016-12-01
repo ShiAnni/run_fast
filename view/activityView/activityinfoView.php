@@ -7,7 +7,7 @@
  */
 require_once (dirname(__FILE__)."/../View.php");
 class ActivityInfoView extends View {
-    private $info;
+    private $id;
     private $name;
     private $publisher;
     private $description;
@@ -17,10 +17,33 @@ class ActivityInfoView extends View {
     private $startTime;
     private $endTime;
     private $location;
+    private $publisherId;
     function display($info){
 
     }
 
+    /**
+     * @return mixed
+     */
+    public function getPublisherId()
+    {
+        return $this->publisherId;
+    }
+
+    /**
+     * @param mixed $publisherId
+     */
+    public function setPublisherId($publisherId)
+    {
+        $this->publisherId = $publisherId;
+    }
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
     public function getDescription(){
         return $this->description;
     }
@@ -31,14 +54,6 @@ class ActivityInfoView extends View {
     public function getEndTime()
     {
         return $this->endTime;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getInfo()
-    {
-        return $this->info;
     }
 
     /**
@@ -96,4 +111,85 @@ class ActivityInfoView extends View {
     {
         return $this->upper;
     }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @param mixed $endTime
+     */
+    public function setEndTime($endTime)
+    {
+        $this->endTime = $endTime;
+    }
+
+    /**
+     * @param mixed $limit
+     */
+    public function setLimit($limit)
+    {
+        $this->limit = $limit;
+    }
+
+    /**
+     * @param mixed $location
+     */
+    public function setLocation($location)
+    {
+        $this->location = $location;
+    }
+
+    /**
+     * @param mixed $num
+     */
+    public function setNum($num)
+    {
+        $this->num = $num;
+    }
+
+    /**
+     * @param mixed $publisher
+     */
+    public function setPublisher($publisher)
+    {
+        $this->publisher = $publisher;
+    }
+
+    /**
+     * @param mixed $startTime
+     */
+    public function setStartTime($startTime)
+    {
+        $this->startTime = $startTime;
+    }
+
+    /**
+     * @param mixed $upper
+     */
+    public function setUpper($upper)
+    {
+        $this->upper = $upper;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
 }

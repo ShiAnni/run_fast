@@ -12,7 +12,7 @@ class ActivityController extends Controller {
         $this->model = new ActivityModel();
     }
 
-    function activities($activityId=null){
+    function check($activityId=null){
         if (is_null($activityId)){
             return $this->model->activityList();
         } else {

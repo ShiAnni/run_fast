@@ -5,9 +5,10 @@
  * Date: 2016/10/29
  * Time: 20:51
  */
+require_once (dirname(__FILE__)."/../Controller.php");
 class FriendController extends Controller {
-    function __construct($view){
-        $this->model = new FriendModel($view);
+    function __construct(){
+        $this->model = new FriendModel();
     }
 
     function friendList($userId, $keyword){
