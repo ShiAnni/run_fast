@@ -17,9 +17,6 @@ class ExerciseView extends View {
     private $height;
     private $weight;
     private $water;
-    function displayData($data){
-        $this->data = $data;
-    }
 
     function displayStatistics($statistics){
         $this->statistics = $statistics;

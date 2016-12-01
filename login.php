@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>跑得快 - 运动没这个是最痛苦的！</title>
-    <link rel="stylesheet" type="text/css" href="../../assets/css/login.css">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/login.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/common.css">
     <!-[IF IE]>
-    <link rel="stylesheet" type="text/css" href="../../assets/css/login-ie.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/login-ie.css">
     <![endif]->
 </head>
 <body>
@@ -15,7 +15,7 @@
         <div class="container">
             <div class="columns">
                 <div class="column">
-                    <img src="../../image/run_icon-100x100.png">
+                    <img src="image/run_icon-100x100.png">
                 </div>
                 <div class="column">
                     <h1 class="title">跑得快 - 运动没这个是最痛苦的！</h1>
