@@ -5,45 +5,75 @@
  * Date: 2016/11/29
  * Time: 17:45
  */
+require_once (dirname(__FILE__)."/personalListView.php");
+$listView = new PersonalListView();
+require_once (dirname(__FILE__)."/../../controller/personalController/dynamicsController.php");
+$controller = new DynamicsController();
+$result = $controller->getDynamics($_SESSION["id"]);
+$xmlStr = "";
+foreach ($result->children() as $item){
+    $itemHtml = new DOMDocument();
+    $itemHtml->loadHTMLFile(dirname(__FILE__)."/dynamic-info.html");
+    $itemHtml->getElementsByTagName("a")[0]->setAttribute("href","/personal.php/personal/".$item->userId[0]);
+    $itemHtml->getElementsByTagName("img")[0]->setAttribute("src",$item->face[0]);
+    $itemHtml->getElementsByTagName("img")[0]->setAttribute("alt",$item->username[0]);
+    $itemHtml->getElementsByTagName("div")[3]->appendChild($itemHtml->createTextNode($item->username[0]));
+    $itemHtml->getElementsByTagName("div")[4]->appendChild($itemHtml->createTextNode($item->time[0]));
+    $itemHtml->getElementsByTagName("div")[5]->appendChild($itemHtml->createTextNode($item->content[0]));
+    $xmlStr.= $itemHtml->saveHTML();
+}
+$listView->setList($xmlStr);
 ?>
+<script type="text/javascript" src="/assets/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+    function sendDynamic() {
+        var content = $(".text-area").text();
+        if (content == ""){
+            alert("请输入动态内容！");
+            return;
+        }
+        $.ajax({
+            type:"POST",
+            url: "/view/personalView/personal.php/send",
+            data: {
+                "content":content
+            },
+            success: function(data){
+                if(data == 1){
+                    refresh();
+                } else {
+                    alert("发送失败！");
+                }
+            }
+        });
+    }
+    
+    function refresh() {
+        $.ajax({
+            type:"POST",
+            url: "/view/personalView/personal.php/refresh",
+            success: function(data){
+                $(".text-area").text("");
+                $('#dynamics').html(data);
+            }
+        });
+    }
+</script>
 <div class="dynamics-send content">
     <div class="text-area" contenteditable="true">
 
     </div>
-    <a class="custom-btn send-btn colored-btn">发送动态</a>
+    <a class="custom-btn send-btn colored-btn" onclick="sendDynamic()">发送动态</a>
 </div>
 <div class="dynamics content">
     <div class="dynamics-item">
-        <a href="/refresh_dynamics">
+        <a onclick="refresh()">
             <div class="refresh">刷新动态</div>
         </a>
     </div>
-    <div class="dynamics-item">
-        <a href="/personal/umaru">
-            <div class="dynamics-title common-columns">
-                <img class="dynamics-face" src="../../image/friend_face.png" alt="小埋" width="50px" height="50px">
-                <div class="dynamics-name-time">
-                    <div>小埋</div>
-                    <div>22:02</div>
-                </div>
-            </div>
-        </a>
-        <div class="dynamics-content">
-            我要喝可乐！
-        </div>
-    </div>
-    <div class="dynamics-item">
-        <a href="/personal/umaru">
-            <div class="dynamics-title common-columns">
-                <img class="dynamics-face" src="../../image/friend_face_2.jpg" alt="学习一个" width="50px" height="50px">
-                <div class="dynamics-name-time">
-                    <div>学习一个</div>
-                    <div>0:02</div>
-                </div>
-            </div>
-        </a>
-        <div class="dynamics-content">
-            阅读《他改变了中国》
-        </div>
+    <div id="dynamics">
+        <?php
+        echo $listView->getList();
+        ?>
     </div>
 </div>

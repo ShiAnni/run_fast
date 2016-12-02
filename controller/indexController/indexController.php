@@ -5,20 +5,22 @@
  * Date: 2016/10/27
  * Time: 23:55
  */
+require_once (dirname(__FILE__)."/../Controller.php");
+require_once (dirname(__FILE__)."/../../model/indexModel/indexModel.php");
 class IndexController extends Controller {
-    function __construct($view){
-        $this->model = new IndexModel($view);
+    function __construct(){
+        $this->model = new IndexModel();
     }
 
     function initialize(){
-        $this->model->initialize();
+        return $this->model->initialize();
     }
 
     function login($username, $password) {
-        $this->model->login($username,$password);
+        return $this->model->login($username,$password);
     }
 
     function register($username, $password){
-        $this->model->register($username,$password);
+        return $this->model->register($username,$password);
     }
 }

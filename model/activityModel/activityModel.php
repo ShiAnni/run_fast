@@ -13,7 +13,7 @@ class ActivityModel extends Model {
     }
 
     function checkActivity($activityId){
-        $result = $this->dataAccess->executeSQL("SELECT * FROM activity WHERE id = ".$activityId);
+        $result = $this->dataAccess->executeSelect("SELECT * FROM activity WHERE id = ".$activityId);
         $row = $result->fetchArray(SQLITE3_ASSOC);
         $xml = ActivityFactory::createActivity($row);
         return simplexml_import_dom($xml);
@@ -26,22 +26,21 @@ class ActivityModel extends Model {
         $publisherId = $activity->publisherId[0];
         $participate = $activity->participate[0];
         $upper = $activity->upper[0];
-        echo $activity->upper[0];
         $startDate = $activity->startDate[0];
         $endDate = $activity->endDate[0];
         $location = $activity->location[0];
         $levelLimit = $activity->limit[0];
-        $this->dataAccess->executeSQL("INSERT INTO activity (name, description, publisher, publisherId, participate, upper, startDate, endDate, location,levelLimit) 
+        $this->dataAccess->executeInUpDe("INSERT INTO activity (name, description, publisher, publisherId, participate, upper, startDate, endDate, location,levelLimit) 
             VALUES('".$name."','".$description."','".$publisher."',".$publisherId.
             ",".$participate.",".$upper.",'".$startDate."','".$endDate."','".$location."',".$levelLimit.");");
-        $id = $this->dataAccess->executeSQL("SELECT id FROM activity WHERE name = '".$name."';")->fetchArray();
-        $result = $this->dataAccess->executeSQL("INSERT INTO participate VALUES (".$publisherId.",".$id["id"].");");
+        $id = $this->dataAccess->executeSelect("SELECT id FROM activity WHERE name = '".$name."';")->fetchArray();
+        $result = $this->dataAccess->executeInUpDe("INSERT INTO participate VALUES (".$publisherId.",".$id["id"].");");
         return $result;
     }
 
     function activityList(){
         $today = date("Y-m-d h:i:s");
-        $result = $this->dataAccess->executeSQL("SELECT * FROM activity WHERE startDate >='".$today."'");
+        $result = $this->dataAccess->executeSelect("SELECT * FROM activity WHERE startDate >='".$today."'");
         $xmlStr = <<<XML
 <activityList>
 </activityList>
@@ -66,7 +65,7 @@ XML;
         $endDate = $activity->endDate[0];
         $location = $activity->location[0];
         $levelLimit = $activity->limit[0];
-        $result = $this->dataAccess->executeSQL("UPDATE activity SET name='".$name."',description='".$description."',publisher='".$publisher."',publisherId=".
+        $result = $this->dataAccess->executeInUpDe("UPDATE activity SET name='".$name."',description='".$description."',publisher='".$publisher."',publisherId=".
             $publisherId.",participate=".$participate.",upper=".$upper.",startDate=".$startDate.",endDate=".$endDate.",location='".$location."',levelLimit=".$levelLimit." WHERE id=".
             $activityId.";"
             );
@@ -74,11 +73,11 @@ XML;
     }
 
     function joinActivity($activityId, $userId){
-        $res = $this->dataAccess->executeSQL("SELECT * FROM participate WHERE userId=".$userId." AND activityId=".$activityId.";")->fetchArray();
+        $res = $this->dataAccess->executeSelect("SELECT * FROM participate WHERE userId=".$userId." AND activityId=".$activityId.";")->fetchArray();
         if ($res == false){
-            $result = $this->dataAccess->executeSQL("INSERT INTO participate VALUES(".$userId.",".$activityId.");");
+            $result = $this->dataAccess->executeInUpDe("INSERT INTO participate VALUES(".$userId.",".$activityId.");");
             if($result){
-                $this->dataAccess->executeSQL("UPDATE activity SET participate=participate+1 WHERE id=".$activityId.";");
+                $this->dataAccess->executeInUpDe("UPDATE activity SET participate=participate+1 WHERE id=".$activityId.";");
             }
             return $result;
         } else {
@@ -87,9 +86,9 @@ XML;
     }
 
     function deleteActivity($activityId){
-        $result = $this->dataAccess->executeSQL("DELETE FROM activity WHERE id=".$activityId.";");
+        $result = $this->dataAccess->executeInUpDe("DELETE FROM activity WHERE id=".$activityId.";");
         if ($result){
-            $this->dataAccess->executeSQL("DELETE FROM participate WHERE activityId=".$activityId.";");
+            $this->dataAccess->executeInUpDe("DELETE FROM participate WHERE activityId=".$activityId.";");
         }
 
         return $result;

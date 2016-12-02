@@ -5,11 +5,9 @@
  * Date: 2016/11/1
  * Time: 15:06
  */
-require_once ("../View.php");
+require_once (dirname(__FILE__)."/../View.php");
 class PersonalView extends View {
     private $content;
-    private $personalInfo;
-    private $infoRight;
     private $name;
     private $level;
     private $experience;
@@ -19,25 +17,31 @@ class PersonalView extends View {
     private $birthday;
     private $fans;
     private $focus;
-    private $message;
     private $friend;
     private $face;
+    private $id;
 
-    function displayContent($content){
-        $this->content = $content;
+    function __construct()
+    {
+        $this->content = "view/personalView/dynamics.php";
     }
 
-    function displayOthersInfoRight($infoRight){
-
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 
-    function displayPersonalInfo($personalInfo){
-
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
-    function displayInfoRight($infoRight){
-
-    }
 
     /**
      * @return mixed
@@ -122,14 +126,6 @@ class PersonalView extends View {
     /**
      * @return mixed
      */
-    public function getMessage()
-    {
-        return $this->message;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getName()
     {
         return $this->name;
@@ -141,5 +137,101 @@ class PersonalView extends View {
     public function getFace()
     {
         return $this->face;
+    }
+
+    /**
+     * @param mixed $birthday
+     */
+    public function setBirthday($birthday)
+    {
+        $this->birthday = $birthday;
+    }
+
+    /**
+     * @param string $content
+     */
+    public function setContent(string $content)
+    {
+        $this->content = $content;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @param mixed $experience
+     */
+    public function setExperience($experience)
+    {
+        $this->experience = $experience;
+    }
+
+    /**
+     * @param mixed $face
+     */
+    public function setFace($face)
+    {
+        $this->face = $face;
+    }
+
+    /**
+     * @param mixed $fans
+     */
+    public function setFans($fans)
+    {
+        $this->fans = $fans;
+    }
+
+    /**
+     * @param mixed $focus
+     */
+    public function setFocus($focus)
+    {
+        $this->focus = $focus;
+    }
+
+    /**
+     * @param mixed $friend
+     */
+    public function setFriend($friend)
+    {
+        $this->friend = $friend;
+    }
+
+    /**
+     * @param mixed $gender
+     */
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
+    }
+
+    /**
+     * @param mixed $level
+     */
+    public function setLevel($level)
+    {
+        $this->level = $level;
+    }
+
+    /**
+     * @param mixed $location
+     */
+    public function setLocation($location)
+    {
+        $this->location = $location;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     }
 }

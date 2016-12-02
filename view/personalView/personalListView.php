@@ -5,20 +5,24 @@
  * Date: 2016/11/1
  * Time: 15:09
  */
-require_once ("../View.php");
+require_once (dirname(__FILE__)."/../View.php");
 class PersonalListView extends View {
     private $list;
 
-
-    function displayDynamicsList($list){
-
+    /**
+     * @return mixed
+     */
+    public function getList()
+    {
+        return $this->list;
     }
 
-    function displayFansList($list){
-
+    /**
+     * @param mixed $list
+     */
+    public function setList($list)
+    {
+        $this->list = $list;
     }
 
-    function displayFocusList($List){
-
-    }
 }

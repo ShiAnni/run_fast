@@ -1,5 +1,5 @@
 <?php
-require ("friendView.php");
+require("friendView.php");
 $view = new FriendView();
 ?>
 <!DOCTYPE html>
@@ -7,8 +7,8 @@ $view = new FriendView();
 <head>
     <meta charset="UTF-8">
     <title>跑得快 - 好友</title>
-    <link rel="stylesheet" type="text/css" href="../../assets/css/common.css">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/friend.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/friend.css">
 </head>
 <body>
 <?php include "../utilityView/banner.php" ?>
@@ -32,7 +32,7 @@ $view = new FriendView();
                     <a href="/personal/umaru" class="common-column">
                         <div class="friend-info common-columns">
                             <div class="friend-face common-column">
-                                <img class="friend-face-img" src="../../image/friend_face.png" alt="小埋">
+                                <img class="friend-face-img" src="image/friend_face.png" alt="小埋">
                             </div>
                             <div class="friend-intro-name common-column">
                                 <div class="friend-name">小埋</div>
@@ -50,7 +50,7 @@ $view = new FriendView();
                     <a href="/personal/umaru" class="common-column">
                         <div class="friend-info common-columns">
                             <div class="friend-face common-column">
-                                <img class="friend-face-img" src="../../image/friend_face_2.jpg" alt="学习一个">
+                                <img class="friend-face-img" src="image/friend_face_2.jpg" alt="学习一个">
                             </div>
                             <div class="friend-intro-name common-column">
                                 <div class="friend-name">学习一个</div>
@@ -69,7 +69,7 @@ $view = new FriendView();
             <div class="common-columns apply-item">
                 <a href="/personal/vita">
                     <div class="friend-face common-column">
-                        <img src="../../image/apply_face.jpg" alt="维他柠檬茶" class="friend-face-img">
+                        <img src="image/apply_face.jpg" alt="维他柠檬茶" class="friend-face-img">
                     </div>
                     <div class="friend-intro-name common-column">
                         <div>维他柠檬茶</div>
@@ -88,7 +88,7 @@ $view = new FriendView();
             <div class="common-columns apply-item">
                 <a href="/personal/angry">
                     <div class="friend-face common-column">
-                        <img src="../../image/apply_face_2.jpg" alt="爱姆安格瑞" class="friend-face-img">
+                        <img src="image/apply_face_2.jpg" alt="爱姆安格瑞" class="friend-face-img">
                     </div>
                     <div class="friend-intro-name common-column">
                         <div>爱姆安格瑞</div>

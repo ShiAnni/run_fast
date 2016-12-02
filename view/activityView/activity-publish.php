@@ -20,7 +20,7 @@ if (count($arr) > 3){
         $activity->getElementsByTagName("location")[0]->nodeValue = $_POST['location'];
         $activity->getElementsByTagName("limit")[0]->nodeValue = substr($_POST['limit'],0,1);
         $controller->publish(simplexml_import_dom($activity));
-        header("/activity.php/activity");
+        header("Location: /activity.php/activity");
     }
 }
 ?>

@@ -1,15 +1,16 @@
 <?php
-session_start();
 require_once (dirname(__FILE__)."/controller/indexController/indexController.php");
 $controller = new IndexController();
 $uri = $_SERVER['REQUEST_URI'];
 $arr = explode("/", $uri);
 $name_err = "hidden";
 $psw_err = "hidden";
+$psw_again_err = "hidden";
 if (count($arr) > 2){
-    if ($arr[2] == "login"){
+    if ($arr[2] == "register"){
         $username = $_POST["user_name"];
         $psw = $_POST["user_password"];
+        $psw_again = $_POST["user_password_again"];
         $isValid = true;
         if (!preg_match("/^[\x{4e00}-\x{9fa5}0-9a-zA-Z]+$/u",$username)){
             $name_err = "";
@@ -19,18 +20,21 @@ if (count($arr) > 2){
             $psw_err = "";
             $isValid = false;
         }
+        if (!($psw === $psw_again)){
+            $psw_again_err = "";
+            $isValid = false;
+        }
         if ($isValid){
-            $result = $controller->login($username, md5($psw));
+            $result = $controller->register($username, md5($psw));
             if (!$result){
-                echo "<script type='text/javascript'>alert('登录失败！');</script>";
-                header("Location: /login.php");
+                echo "<script type='text/javascript'>alert('注册失败！');</script>";
+                header("Location: /register.php");
             } else {
+                session_start();
                 $_SESSION["id"] = (int)$result->userId[0];
-                $_SESSION["name"] = (string)$result->username[0];
-                $_SESSION["face"] = (string)$result->face[0];
-                session_write_close();
+                $_SESSION["name"] = $result->username[0];
+                $_SESSION["face"] = $result->face[0];
                 header("Location: /index.php");
-                exit();
             }
         }
     }
@@ -41,11 +45,15 @@ if (count($arr) > 2){
 <head>
     <meta charset="UTF-8">
     <title>跑得快 - 运动没这个是最痛苦的！</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/login.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/login.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/register.css">
     <!-[IF IE]>
     <link rel="stylesheet" type="text/css" href="/assets/css/login-ie.css">
     <![endif]->
+    <script type="text/javascript" src="/assets/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/notify.min.js"></script>
 </head>
 <body>
 <div role="main">
@@ -66,21 +74,26 @@ if (count($arr) > 2){
                         你还可以在这里发布自己的运动动态，和大家交流你的人生经验。</p>
                 </div>
                 <div class="login column">
-                    <form class="input_group" method="post" action="/login.php/login">
+                    <form class="input_group" method="post" action="/register.php/register">
                         <dl>
                             <dd>
-                                <label class="form-label <?php echo $name_err?>" for="user[name]">用户名错误</label>
-                                <input class="form-control input-block" id="user[name]" type="text" name="user_name" autofocus="" placeholder="请输入用户名">
+                                <label class="form-label <?php echo $name_err?>" for="user_name">用户名不正确！</label>
+                                <input class="form-control input-block" id="user_name" type="text" name="user_name" placeholder="请输入用户名">
                             </dd>
                         </dl>
                         <dl>
                             <dd>
-                                <label class="form-label <?php echo $psw_err?>" for="user[password]">密码错误</label>
-                                <input class="form-control input-block" id="user[password]" type="password" name="user_password" autofocus="" placeholder="请输入密码">
+                                <label class="form-label <?php echo $psw_err?>" for="user_password">密码不正确！</label>
+                                <input class="form-control input-block" id="user_password" type="password" name="user_password" placeholder="请输入密码" >
                             </dd>
                         </dl>
-                        <button class="custom-btn btn-block" type="submit">登录</button>
-                        <a href="/register.php"><button class="custom-btn btn-block" type="button">没有账号？注册一个</button></a>
+                        <dl>
+                            <dd>
+                                <label class="form-label <?php echo $psw_again_err?>" for="user_password_again">两次密码不一致！</label>
+                                <input class="form-control input-block" id="user_password_again" type="password" name="user_password_again" placeholder="请再次输入密码" >
+                            </dd>
+                        </dl>
+                        <button class="custom-btn btn-block" type="submit">注册</button>
                     </form>
                 </div>
             </div>
@@ -88,4 +101,5 @@ if (count($arr) > 2){
     </div>
 </div>
 </body>
+
 </html>

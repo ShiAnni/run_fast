@@ -23,7 +23,7 @@ $bannerView = BannerView::getBanner();
             </nav>
             <div  class="personal-info-header">
                 <div>
-                    <a href="/view/personal.html">
+                    <a href="/personal.php/personal/<?php echo $bannerView->getId() ?>">
                         <div class="info-btn">
                             <img class="face-img" src="<?php echo $bannerView->getFace()?>" alt="<?php echo $bannerView->getName()?>" width="50px" height="50px">
                             <p class="column"><?php echo $bannerView->getName()?></p>

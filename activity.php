@@ -1,10 +1,11 @@
 <?php
+include_once dirname(__FILE__)."/view/utilityView/prevent.php";
 require(dirname(__FILE__)."/view/activityView/activityView.php");
 $view = new ActivityView();
 $uri = $_SERVER['REQUEST_URI'];
 $arr = explode("/", $uri);
 require_once (dirname(__FILE__)."/controller/activityController/activityController.php");
-require_once (dirname(__FILE__)."/view/utilityView/bannerView.php");
+BannerView::getBanner()->setSelected("activity.php");
 $controller = new ActivityController();
 if (count($arr) > 2){
     switch ($arr[2]){
@@ -15,10 +16,12 @@ if (count($arr) > 2){
                     $view->setContent("view/activityView/activity-info.php");
                 } else if ($arr[3] == "delete"){
                     $controller->delete($arr[4]);
-                    header("/activity.php/activity");
+                    header("Location: /activity.php/activity");
+                    exit();
                 } else if ($arr[3] == "join"){
                     $controller->join($arr[4], BannerView::getBanner()->getId());
-                    header("/activity.php/activity");
+                    header("Location: /activity.php/activity");
+                    exit();
                 }
             } else {
                 $view->setTag("activity-list");

@@ -5,7 +5,7 @@
  * Date: 2016/11/1
  * Time: 14:15
  */
-require (dirname(__FILE__)."/../View.php");
+require_once (dirname(__FILE__)."/../View.php");
 class ActivityView extends View {
     private $tag = "activity-list";
     private $content = "view/activityView/activity-list.php";

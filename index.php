@@ -1,26 +1,71 @@
+<?php
+include_once dirname(__FILE__)."/view/utilityView/prevent.php";
+require_once (dirname(__FILE__)."/view/indexView/indexView.php");
+$view = new IndexView();
+require_once (dirname(__FILE__)."/controller/activityController/activityController.php");
+BannerView::getBanner()->setSelected("index.php");
+require_once (dirname(__FILE__)."/controller/indexController/indexController.php");
+$controller = new IndexController();
+$result = $controller->initialize();
+
+$newsList = $result->newsList;
+$newsStr = "";
+foreach ($newsList->children() as $child){
+    $itemHtml = new DOMDocument();
+    $itemHtml->loadHTMLFile(dirname(__FILE__)."/view/indexView/index-info.html");
+    $itemHtml->getElementsByTagName("a")[0]->appendChild($itemHtml->createTextNode($child->title[0]));
+    $itemHtml->getElementsByTagName("div")[0]->appendChild($itemHtml->createTextNode($child->time[0]));
+    $newsStr.= $itemHtml->saveHTML();
+}
+$view->setNews($newsStr);
+
+$announcementList = $result->announcementList;
+$announcementStr = "";
+foreach ($announcementList->children() as $child){
+    $itemHtml = new DOMDocument();
+    $itemHtml->loadHTMLFile(dirname(__FILE__)."/view/indexView/index-info.html");
+    $itemHtml->getElementsByTagName("a")[0]->appendChild($itemHtml->createTextNode($child->title[0]));
+    $itemHtml->getElementsByTagName("div")[0]->appendChild($itemHtml->createTextNode($child->time[0]));
+    $announcementStr.= $itemHtml->saveHTML();
+}
+$view->setAnnouncements($announcementStr);
+
+$activityList = $result->activityList;
+$activityStr = "";
+foreach ($activityList->children() as $child){
+    $itemHtml = new DOMDocument();
+    $itemHtml->loadHTMLFile(dirname(__FILE__)."/view/indexView/activity-info.html");
+    $itemHtml->getElementsByTagName("a")[0]->setAttribute("href","/activity.php/activity/".$child->id[0]);
+    $itemHtml->getElementsByTagName("a")[0]->appendChild($itemHtml->createTextNode($child->title[0]));
+    $itemHtml->getElementsByTagName("div")[0]->appendChild($itemHtml->createTextNode($child->time[0]));
+    $activityStr.= $itemHtml->saveHTML();
+}
+$view->setActivities($activityStr);
+
+$rank = $result->rank;
+?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
     <title>跑得快 - 运动没这个是最痛苦的！</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/common.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/index.css">
 </head>
 <body>
-<?php include "../utilityView/banner.php" ?>
+<?php include dirname(__FILE__)."/view/utilityView/banner.php" ?>
 <div role="main">
     <div class="common-columns index-row">
         <div class="announcement common-column content content-first index-item item-left">
             <div class="title">网站公告</div>
             <ul class="news-ul">
-                <li><a class="link-btn">跑得快网站上线</a><div class="news-time">2016-10-21</div></li>
-                <li><a class="link-btn">本网站处于开发阶段</a><div class="news-time">2016-10-21</div></li>
+                <?php echo $view->getAnnouncements()?>
             </ul>
         </div>
         <div class="news common-column content content-first index-item">
             <div class="title">网站新闻</div>
             <ul class="news-ul">
-                <li><a class="link-btn">大作业好多呀</a><div class="news-time">2016-10-21</div></li>
+                <?php echo $view->getNews()?>
             </ul>
         </div>
     </div>
@@ -28,13 +73,13 @@
         <div class="activity common-column content index-item item-left">
             <div class="title">最新活动</div>
             <ul class="news-ul">
-                <li><a class="link-btn" href="../activityView/activity-info.html">玄武湖健走</a><div class="news-time">2016-10-21</div></li>
-                <li><a class="link-btn">登栖霞山</a><div class="news-time">2016-10-21</div></li>
+                <?php echo $view->getActivities()?>
             </ul>
         </div>
         <div class="rank common-column content index-item">
             <div class="title">运动排名</div>
             <ul class="rank-ul">
+                <?php echo $view->getRank()?>
                 <li class="common-columns">
                     <a>
                         <div class="rank-num rank-first common-column">1</div>

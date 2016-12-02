@@ -24,8 +24,13 @@ class DataAccess {
         return self::$dataAccess;
     }
 
-    function executeSQL($sql){
+    function executeSelect($sql){
         $result = $this->sqlite->query($sql);
+        return $result;
+    }
+
+    function executeInUpDe($sql){
+        $result = $this->sqlite->exec($sql);
         return $result;
     }
 }

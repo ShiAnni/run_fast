@@ -9,17 +9,15 @@ require_once (dirname(__FILE__)."/../View.php");
 class BannerView extends View {
     private static $banner;
     private $selected;
-    private $personalInfo;
     private $face;
     private $name;
     private $id;
 
     private function __construct()
     {
-        $this->selected = "activity.php";
-        $this->face = "/image/faceimg.jpg";
-        $this->name = "大清没有完";
-        $this->id = 0;
+        $this->id = $_SESSION["id"];
+        $this->name = $_SESSION["name"];
+        $this->face = $_SESSION["face"];
     }
 
     static function getBanner(){
@@ -59,7 +57,7 @@ class BannerView extends View {
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId()
     {
         return $this->id;
     }
