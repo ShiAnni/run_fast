@@ -7,6 +7,8 @@
  */
 session_start();
 require_once (dirname(__FILE__)."/../../controller/personalController/dynamicsController.php");
+require_once (dirname(__FILE__)."/../../controller/personalController/focusController.php");
+require_once (dirname(__FILE__)."/../../controller/personalController/fansController.php");
 $uri = $_SERVER['REQUEST_URI'];
 $arr = explode("/", $uri);
 if (count($arr) > 4){
@@ -39,6 +41,12 @@ if (count($arr) > 4){
             echo (string)$controller->sendDynamic(simplexml_import_dom($xml));
             break;
         case "un-focus":
+            $controller = new FocusController();
+            echo $controller->removeFocus($_SESSION["id"],$_POST["id"]);
+            break;
+        case "focus":
+            $controller = new FansController();
+            echo $controller->focusUser($_SESSION["id"],$_POST["id"]);
             break;
     }
 }

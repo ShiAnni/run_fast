@@ -12,12 +12,14 @@ class BannerView extends View {
     private $face;
     private $name;
     private $id;
+    private $isManager;
 
     private function __construct()
     {
         $this->id = $_SESSION["id"];
         $this->name = $_SESSION["name"];
         $this->face = $_SESSION["face"];
+        $this->isManager = $_SESSION["isManager"];
     }
 
     static function getBanner(){
@@ -38,6 +40,14 @@ class BannerView extends View {
         return $this->selected;
     }
 
+
+    /**
+     * @return mixed
+     */
+    public function getIsManager()
+    {
+        return $this->isManager;
+    }
     /**
      * @return mixed
      */

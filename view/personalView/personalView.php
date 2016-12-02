@@ -8,6 +8,7 @@
 require_once (dirname(__FILE__)."/../View.php");
 class PersonalView extends View {
     private $content;
+    private $info;
     private $name;
     private $level;
     private $experience;
@@ -20,11 +21,98 @@ class PersonalView extends View {
     private $friend;
     private $face;
     private $id;
+    private $width;
+    private $visible;
+    private $focused;
+    private $isFriend;
+
+
+    /**
+     * @return mixed
+     */
+    public function getInfo()
+    {
+        return $this->info;
+    }
+
+    /**
+     * @param mixed $info
+     */
+    public function setInfo($info)
+    {
+        $this->info = $info;
+    }
+    /**
+     * @return mixed
+     */
+    public function getFocused()
+    {
+        return $this->focused;
+    }
+
+    /**
+     * @param mixed $focused
+     */
+    public function setFocused($focused)
+    {
+        $this->focused = $focused;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIsFriend()
+    {
+        return $this->isFriend;
+    }
+
+    /**
+     * @param mixed $isFriend
+     */
+    public function setIsFriend($isFriend)
+    {
+        $this->isFriend = $isFriend;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function isSelf()
+    {
+        return $this->visible;
+    }
+
+    /**
+     * @param mixed $isSelf
+     */
+    public function setIsSelf($isSelf)
+    {
+        $this->visible = $isSelf;
+    }
+
 
     function __construct()
     {
         $this->content = "view/personalView/dynamics.php";
+        $this->info = "view/personalView/personal-info.php";
     }
+
+    /**
+     * @return mixed
+     */
+    public function getWidth()
+    {
+        return $this->width;
+    }
+
+    /**
+     * @param mixed $width
+     */
+    public function setWidth($width)
+    {
+        $this->width = $width;
+    }
+
 
     /**
      * @return mixed

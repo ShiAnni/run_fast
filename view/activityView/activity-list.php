@@ -31,11 +31,15 @@ foreach ($xmlList->children() as $item){
     $itemHtml->getElementsByTagName("div")[11]->appendChild($itemHtml->createTextNode($item->participate[0]."/".$item->upper[0]));
     $itemHtml->getElementsByTagName("div")[14]->appendChild($itemHtml->createTextNode($item->limit[0]));
 
-    if ($item->publisherId[0] == BannerView::getBanner()->getId()){
-        $itemHtml->getElementsByTagName("a")[1]->setAttribute("href","/activity.php/activity/delete/".$item->id[0]);
+    if (!(($item->publisherId[0] == $_SESSION["id"])||($_SESSION["isManager"] == 1))){
+        $itemHtml->getElementsByTagName("a")[1]->setAttribute("style","display:none");
     } else {
-        $itemHtml->getElementsByTagName("a")[1]->setAttribute("href","/activity.php/activity/join/".$item->id[0]);
-        $itemHtml->getElementsByTagName("a")[1]->nodeValue = "参加活动";
+        $itemHtml->getElementsByTagName("a")[1]->setAttribute("href","/activity.php/activity/delete/".$item->id[0]);
+    }
+    if($item->publisherId[0] == $_SESSION["id"]){
+        $itemHtml->getElementsByTagName("a")[2]->setAttribute("style","display:none");
+    } else {
+        $itemHtml->getElementsByTagName("a")[2]->setAttribute("href","/activity.php/activity/join/".$item->id[0]);
     }
     $xmlStr.= $itemHtml->saveHTML();
 }

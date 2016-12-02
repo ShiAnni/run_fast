@@ -26,6 +26,25 @@ class PersonalModel extends Model {
             $xml->getElementsByTagName("gender")[0]->nodeValue = $row['gender'];
             $xml->getElementsByTagName("location")[0]->nodeValue = $row['location'];
             $xml->getElementsByTagName("birthday")[0]->nodeValue = $row['birthday'];
+            if ($_SESSION["id"] != $userId){
+                $focused = $this->dataAccess->executeSelect("SELECT * FROM focus WHERE focusId=".$_SESSION["id"]." AND focusedId=".$row["id"].";");
+                if ($focused->fetchArray()){
+                    $xml->getElementsByTagName("focused")[0]->appendChild($xml->createTextNode("1"));
+                } else {
+                    $xml->getElementsByTagName("focused")[0]->appendChild($xml->createTextNode("0"));
+                }
+                $friend = $this->dataAccess->executeSelect("SELECT * FROM friend WHERE userAId=".$_SESSION["id"]." AND userBId=".$row["id"].";");
+                if ($friend->fetchArray()){
+                    $xml->getElementsByTagName("isFriend")[0]->appendChild($xml->createTextNode("2"));
+                } else {
+                    $friend = $this->dataAccess->executeSelect("SELECT * FROM apply WHERE applier=".$_SESSION["id"]." AND applied=".$row["id"].";");
+                    if ($friend->fetchArray()){
+                        $xml->getElementsByTagName("isFriend")[0]->appendChild($xml->createTextNode("1"));
+                    } else {
+                        $xml->getElementsByTagName("isFriend")[0]->appendChild($xml->createTextNode("0"));
+                    }
+                }
+            }
             return simplexml_import_dom($xml);
         } else {
             return false;

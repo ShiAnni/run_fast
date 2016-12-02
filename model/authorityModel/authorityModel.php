@@ -5,24 +5,13 @@
  * Date: 2016/10/28
  * Time: 0:14
  */
-class authorityModel extends Model {
-    function __construct($view) {
-        parent::__construct($view);
-    }
-
-    function getBannedList($keyword) {
-
+require_once (dirname(__FILE__)."/../Model.php");
+class AuthorityModel extends Model {
+    function __construct() {
+        parent::__construct();
     }
 
     function getUserList($keyword){
-
-    }
-
-    function ban($userId, $length){
-
-    }
-
-    function release($userId){
 
     }
 

@@ -1,124 +1,53 @@
+<?php
+require_once (dirname(__FILE__)."/../../controller/personalController/focusController.php");
+$controller = new FocusController();
+$count = 0;
+require_once (dirname(__FILE__)."/personalListView.php");
+$listView = new PersonalListView();
+$uri = $_SERVER['REQUEST_URI'];
+$arr = explode("/", $uri);
+$result = $controller->getFocusList($arr[3]);
+$name = $result->attributes()["name"];
+$id = $result->attributes()["id"];
+$xmlStr = "";
+foreach ($result->children() as $item){
+    $itemHtml = new DOMDocument();
+    $itemHtml->loadHTMLFile(dirname(__FILE__)."/focus-info.html");
+    if ($view->isSelf()){
+        $itemHtml->getElementsByTagName("a")[2]->appendChild($itemHtml->createTextNode("取消关注"));
+        if ($item->isFriend[0] == "1"){
+            $itemHtml->getElementsByTagName("a")[2]->setAttribute("class","custom-btn plane-colored-btn btn-right btn-disabled");
+        }  else {
+            $itemHtml->getElementsByTagName("a")[2]->setAttribute("class","custom-btn plane-colored-btn btn-right un-focus");
+            $itemHtml->getElementsByTagName("a")[2]->setAttribute("id",$item->userId[0]);
+        }
+    } else {
+        $itemHtml->getElementsByTagName("a")[2]->setAttribute("display","none");
+    }
+    $itemHtml->getElementsByTagName("a")[0]->setAttribute("href","/personal.php/personal/".$item->userId[0]);
+    $itemHtml->getElementsByTagName("img")[0]->setAttribute("src",$item->face[0]);
+    $itemHtml->getElementsByTagName("img")[0]->setAttribute("alt",$item->username[0]);
+    $itemHtml->getElementsByTagName("a")[1]->setAttribute("href","/personal.php/personal/".$item->userId[0]);
+    $itemHtml->getElementsByTagName("a")[1]->appendChild($itemHtml->createTextNode($item->username[0]));
+    $itemHtml->getElementsByTagName("div")[3]->appendChild($itemHtml->createTextNode($item->description[0]));
+    $xmlStr.= $itemHtml->saveHTML();
+    $count++;
+}
+$listView->setList($xmlStr);
+?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>跑得快 - 大清没有完的关注</title>
-    <link rel="stylesheet" type="text/css" href="../../assets/css/common.css">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/personal.css">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/focus.css">
-</head>
-<body>
-<header class="header" role="banner">
-    <div class="container">
-        <img class="head-logo" src="../../image/run_icon-50x50.png">
-        <div class="head-menu">
-            <nav class="head-nav">
-                <a class="nav-item" href="/login">主页</a>
-                <a class="nav-item" href="/data">运动数据</a>
-                <a class="nav-item" href="/activity">活动</a>
-            </nav>
-        </div>
-        <a href="/personal/da-qing-mei-you-wan">
-            <div  class="personal-info-header">
-                <div class="info-btn">
-                    <img class="face-img" src="../../image/faceimg.jpg" alt="大清没有完" width="50px" height="50px">
-                    <p class="column">大清没有完</p>
-                </div>
-            </div>
-        </a>
+<link rel="stylesheet" type="text/css" href="/assets/css/focus.css">
+
+<div class="content focuses">
+    <div class="focus-head">
+        <a class="link-btn" href="/personal.php/personal/<?php echo $id?>"><?php echo $name?> </a>关注了<?php echo $count?>个人
+        <a class="link-btn btn-right" href="/personal.php/personal/<?php echo $id?>">返回个人中心</a>
     </div>
-</header>
-<div role="main">
-    <div class="content-container">
-        <div class="personal-info content">
-            <img class="info-face-img" src="../../image/faceimg.jpg" alt="大清没有完" width="100px" height="100px">
-            <div class="personal-info-right">
-                <div class="personal-introduction">
-                    <div class="title">
-                        <h2>大清没有完</h2>
-                        <div class="level">
-                            8级 香港记者
-                        </div>
-                    </div>
-                    <div class="experience">
-                        <div class="experience-title">经验值：</div>
-                        <div class="experience-bar">
-                            <div class="experience-bar-filled">
-
-                            </div>
-                        </div>
-                        <div class="experience-num">
-                            153000/255000
-                        </div>
-                    </div>
-                    <div class="personal-info-other">
-                        <p>喜同袍，清时幸遭。真熙皞，帝国苍穹保。</p>
-                        <span class="personal-info-span">
-                            <span class="not-last-span">男</span>
-                            <span class="not-last-span">上海 闵行区</span>
-                            <span>1926年8月17日</span>
-                        </span>
-                        <a class="edit-btn" href="/personal/edit">编辑</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="personal-social content">
-            <div class="block">
-                <div class="social-title">关注</div>
-                <a href="/focus">90</a>
-            </div>
-            <div class="block">
-                <div class="social-title">粉丝</div>
-                <a href="/fans">1926</a>
-            </div>
-            <div class="block">
-                <div class="social-title">私信</div>
-                <a href="/message">没有新私信</a>
-            </div>
-            <div class="block">
-                <div class="social-title">好友</div>
-                <a href="/friends">817</a>
-            </div>
-        </div>
-        <div class="content focuses">
-            <div class="focus-head">
-                <a class="link-btn" href="/view/personalView/personal.html">大清没有完 </a>关注了90个人
-                <a class="link-btn btn-right" href="/view/personalView/personal.html">返回个人中心</a>
-            </div>
-            <div class="focus-item common-columns">
-                <a class="custom-btn plane-colored-btn btn-disabled btn-right">取消关注</a>
-                <a class="common-column">
-                    <img src="../../image/friend_face.png" class="focus-face">
-                </a>
-                <div class="focus-info">
-                    <div class="focus-name"><a class="link-btn">小埋</a></div>
-                    <div class="focus-intro">吃睡玩三连击</div>
-                </div>
-            </div>
-            <div class="focus-item common-columns">
-                <a class="custom-btn plane-colored-btn btn-disabled btn-right">取消关注</a>
-                <a class="common-column">
-                    <img src="../../image/friend_face_2.jpg" class="focus-face">
-                </a>
-                <div class="focus-info">
-                    <div class="focus-name"><a class="link-btn">学习一个</a></div>
-                    <div class="focus-intro">你们还是要提高自己的姿势水平</div>
-                </div>
-
-            </div>
-            <div class="focus-item common-columns">
-                <a class="custom-btn plane-colored-btn btn-right">取消关注</a>
-                <a class="common-column">
-                    <img src="../../image/manager.jpg" class="focus-face">
-                </a>
-                <div class="focus-info">
-                    <div class="focus-name"><a class="link-btn">doge</a></div>
-                    <div class="focus-intro">权限汪</div>
-                </div>
-            </div>
-        </div>
+    <div id="focus-list">
+        <?php echo $listView->getList() ?>
     </div>
 </div>
-</body>
 </html>
+<script type="text/javascript" src="/view/personalView/fans.js">
+</script>

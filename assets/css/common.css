@@ -188,6 +188,7 @@ a:hover {
 .plane-colored-btn:hover {
     border-color: #2c94c1;
     color: #2c94c1;
+    cursor: pointer;
 }
 .btn-disabled {
     border-color: rgba(0,0,0,0.6);

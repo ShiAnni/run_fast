@@ -9,7 +9,9 @@ require_once (dirname(__FILE__)."/personalListView.php");
 $listView = new PersonalListView();
 require_once (dirname(__FILE__)."/../../controller/personalController/dynamicsController.php");
 $controller = new DynamicsController();
-$result = $controller->getDynamics($_SESSION["id"]);
+$uri = $_SERVER['REQUEST_URI'];
+$arr = explode("/", $uri);
+$result = $controller->getDynamics($arr[3]);
 $xmlStr = "";
 foreach ($result->children() as $item){
     $itemHtml = new DOMDocument();
@@ -59,14 +61,14 @@ $listView->setList($xmlStr);
         });
     }
 </script>
-<div class="dynamics-send content">
+<div style="<?php if ($view->isSelf()) echo "visibility: visible"; else echo "display: none"; ?>"class="dynamics-send content">
     <div class="text-area" contenteditable="true">
 
     </div>
     <a class="custom-btn send-btn colored-btn" onclick="sendDynamic()">发送动态</a>
 </div>
 <div class="dynamics content">
-    <div class="dynamics-item">
+    <div style="<?php if ($view->isSelf()) echo "visibility: visible"; else echo "display: none"; ?>"class="dynamics-item">
         <a onclick="refresh()">
             <div class="refresh">刷新动态</div>
         </a>

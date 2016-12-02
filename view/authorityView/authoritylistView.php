@@ -8,19 +8,19 @@
 class AuthorityListView extends View {
     private $list;
 
-    function displayUserList($list){
-
-    }
-
-    function displayBannedList($list){
-
-    }
-
     /**
      * @return mixed
      */
     public function getList()
     {
         return $this->list;
+    }
+
+    /**
+     * @param mixed $list
+     */
+    public function setList($list)
+    {
+        $this->list = $list;
     }
 }

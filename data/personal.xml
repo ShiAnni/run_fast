@@ -2,4 +2,5 @@
     <userId></userId>
     <face></face>
     <username></username>
+    <isManager></isManager>
 </personal>

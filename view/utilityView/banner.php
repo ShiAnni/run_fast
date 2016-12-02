@@ -20,6 +20,13 @@ $bannerView = BannerView::getBanner();
                 <a class="nav-item <?php if($bannerView->getSelected() == "index.php"){echo "nav-selected";}  ?>" href="/index.php">主页</a>
                 <a class="nav-item <?php if($bannerView->getSelected() == "exercise.php"){echo "nav-selected";}  ?>" href="/exercise.php">运动数据</a>
                 <a class="nav-item <?php if($bannerView->getSelected() == "activity.php"){echo "nav-selected";}  ?>" href="/activity.php">活动</a>
+                <?php if ($bannerView->getIsManager()) {
+                    echo "<a class=\"nav-item ";
+                    if ($bannerView->getSelected() == "authority.php"){
+                        echo "nav-selected";
+                    }
+                    echo "\" href=\"/authority.php\">权限管理</a>";
+                } ?>
             </nav>
             <div  class="personal-info-header">
                 <div>

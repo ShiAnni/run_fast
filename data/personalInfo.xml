@@ -9,4 +9,6 @@
     <gender></gender>
     <location></location>
     <birthday></birthday>
+    <focused></focused>
+    <isFriend></isFriend>
 </personalInfo>

@@ -5,15 +5,20 @@
  * Date: 2016/11/11
  * Time: 11:19
  */
-require_once ("authoritylistView.php");
+require_once (dirname(__FILE__)."/authoritylistView.php");
 $listView = new AuthorityListView();
+require_once (dirname(__FILE__)."/../../controller/authorityController/authorityController.php");
+$controller = new AuthorityController();
+$result = $controller->getUserList();
 ?>
 <div class="content content-first user-list">
     <div class="user-item user-search common-columns">
         <input type="text" class="form-control common-column search-text" placeholder="搜索用户">
         <a class="custom-btn colored-btn common-column search-btn">搜索</a>
-        <a class="custom-btn colored-btn common-column">封禁列表</a>
     </div>
+    <?php
+    echo $listView->getList();
+    ?>
     <div class="user-item common-columns">
         <img src="../../image/faceimg.jpg" class="user-face list-face-img common-column">
         <div class="common-column user-name">大清没有完</div>

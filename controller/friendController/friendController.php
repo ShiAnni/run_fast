@@ -6,35 +6,38 @@
  * Time: 20:51
  */
 require_once (dirname(__FILE__)."/../Controller.php");
+require_once (dirname(__FILE__)."/../../model/friendModel/friendModel.php");
 class FriendController extends Controller {
     function __construct(){
         $this->model = new FriendModel();
     }
 
-    function friendList($userId, $keyword){
-        $this->model->friendList($userId.$keyword);
+    function friendList($userId){
+        return $this->model->friendList($userId);
     }
 
     function getApplyList($userId){
-        $this->model->getApplyList($userId);
+        return $this->model->getApplyList($userId);
     }
 
     function acceptApply($userId, $applyId){
-        $this->model->addFriend($userId,$applyId);
-        $this->model->removeApply($userId,$applyId);
+        $success = $this->model->addFriend($userId,$applyId);
+        if ($success){
+            return $this->model->removeApply($userId,$applyId);
+        } else {
+            return false;
+        }
     }
 
     function rejectApply($userId, $applyId){
-        $this->model->removeApply($userId,$applyId);
+        return $this->model->removeApply($userId,$applyId);
     }
 
     function deleteFriend($userId, $friendId){
-        $this->model->deleteFriend($userId, $friendId);
+        return $this->model->deleteFriend($userId, $friendId);
     }
 
-    function sendMessage($message){
-        require ("../../model/messageModel/messageModel.php");
-        $messageModel = new MessageModel();
-        $messageModel->sendMessage($message);
+    function sendApply($userId,$applyId){
+        return $this->model->sendApply($userId, $applyId);
     }
 }

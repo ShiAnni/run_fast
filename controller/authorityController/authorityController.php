@@ -5,25 +5,15 @@
  * Date: 2016/10/27
  * Time: 23:54
  */
+require_once (dirname(__FILE__)."/../Controller.php");
+require_once (dirname(__FILE__)."/../../model/authorityModel/authorityModel.php");
 class AuthorityController extends Controller {
-    function __construct($view) {
-        $this->model = new AuthorityModel($view);
-    }
-
-    function getBannedList($keyword) {
-        $this->model->getBannedList($keyword);
+    function __construct() {
+        $this->model = new AuthorityModel();
     }
 
     function getUserList($keyword){
         $this->model->getUserList($keyword);
-    }
-
-    function ban($userId, $length){
-        $this->model->ban($userId,$length);
-    }
-
-    function release($userId){
-        $this->model->release($userId);
     }
 
     function setManager($userId){

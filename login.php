@@ -28,6 +28,7 @@ if (count($arr) > 2){
                 $_SESSION["id"] = (int)$result->userId[0];
                 $_SESSION["name"] = (string)$result->username[0];
                 $_SESSION["face"] = (string)$result->face[0];
+                $_SESSION["isManager"] = (int)$result->isManager[0];
                 session_write_close();
                 header("Location: /index.php");
                 exit();

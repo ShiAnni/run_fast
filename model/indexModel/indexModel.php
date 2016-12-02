@@ -75,6 +75,7 @@ class IndexModel extends Model {
         $xml->getElementsByTagName("userId")[0]->appendChild($xml->createTextNode($row["id"]));
         $xml->getElementsByTagName("face")[0]->appendChild($xml->createTextNode($row["face"]));
         $xml->getElementsByTagName("username")[0]->appendChild($xml->createTextNode($row["username"]));
+        $xml->getElementsByTagName("isManager")[0]->appendChild($xml->createTextNode($row["isManager"]));
         return simplexml_import_dom($xml);
     }
 }
