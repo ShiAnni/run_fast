@@ -13,6 +13,13 @@ class PublishController extends Controller {
     }
 
     function publish($activity){
-        $this->model->addActivity($activity);
+        $result = $this->model->addActivity($activity);
+        if ($result){
+            require_once (dirname(__FILE__)."/../../model/personalModel/personalModel.php");
+            $personalModel = new PersonalModel();
+            return $personalModel->updateExperience($_SESSION["id"], 100);
+        } else {
+            return false;
+        }
     }
 }

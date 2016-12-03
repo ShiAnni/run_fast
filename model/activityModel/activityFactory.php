@@ -20,6 +20,12 @@ class ActivityFactory {
         $xml->getElementsByTagName("endDate")[0]->nodeValue = $row['endDate'];
         $xml->getElementsByTagName("location")[0]->nodeValue = $row['location'];
         $xml->getElementsByTagName("limit")[0]->nodeValue = $row['levelLimit']."级";
+        $result = DataAccess::getDataAccess()->executeSelect("SELECT * FROM participate WHERE userId=".$_SESSION["id"]." AND activityId=".$row["id"]);
+        if ($result->fetchArray()){
+            $xml->getElementsByTagName("isJoined")[0]->appendChild($xml->createTextNode(1));
+        } else {
+            $xml->getElementsByTagName("isJoined")[0]->appendChild($xml->createTextNode(0));
+        }
         return $xml;
     }
 }

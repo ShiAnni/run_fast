@@ -18,9 +18,28 @@ class ActivityInfoView extends View {
     private $endTime;
     private $location;
     private $publisherId;
+    private $isJoined;
+
     function display($info){
 
     }
+
+    /**
+     * @param mixed $isJoined
+     */
+    public function setIsJoined($isJoined)
+    {
+        $this->isJoined = $isJoined;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIsJoined()
+    {
+        return $this->isJoined;
+    }
+
 
     /**
      * @return mixed

@@ -13,14 +13,24 @@ class ExerciseController extends Controller {
     }
 
     function record($data){
-        return $this->model->record($data);
+        $result = $this->model->record($data);
+        if ($result){
+            require_once (dirname(__FILE__)."/../../model/personalModel/personalModel.php");
+            $personalModel = new PersonalModel();
+            return $personalModel->updateExperience($_SESSION["id"],20);
+        } else {
+            return 0;
+        }
     }
 
     function getTodayData($userId) {
         return $this->model->getTodayData($userId);
     }
 
-    function getStatistics($userId, $dataType, $statisticType, $startTime, $endTime){
-        return $this->model->getStatistics($userId,$dataType,$statisticType,$startTime,$endTime);
+    function getStatistics($userId, $dataType, $startTime, $endTime, $statisticType=""){
+        switch ($statisticType){
+            case "":
+                return $this->model->getStatistics($userId,$dataType,$startTime,$endTime);
+        }
     }
 }

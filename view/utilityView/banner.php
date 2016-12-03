@@ -29,7 +29,7 @@ $bannerView = BannerView::getBanner();
                 } ?>
             </nav>
             <div  class="personal-info-header">
-                <div>
+                <div class="common-column">
                     <a href="/personal.php/personal/<?php echo $bannerView->getId() ?>">
                         <div class="info-btn">
                             <img class="face-img" src="<?php echo $bannerView->getFace()?>" alt="<?php echo $bannerView->getName()?>" width="50px" height="50px">
@@ -37,6 +37,7 @@ $bannerView = BannerView::getBanner();
                         </div>
                     </a>
                 </div>
+                <a class="common-column logout" href="/index.php/logout">注销</a>
             </div>
         </div>
     </div>

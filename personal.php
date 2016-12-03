@@ -15,6 +15,10 @@ if (count($arr) > 2){
         case "fans":
             $view->setContent("view/personalView/fans.php");
             break;
+        case "edit":
+            $view->setInfo("view/personalView/personal-edit.php");
+            $view->setContent("");
+            break;
     }
 }
 function getPersonalInfo($id,$view){
@@ -49,10 +53,15 @@ function getPersonalInfo($id,$view){
 <head>
     <meta charset="UTF-8">
     <title>跑得快 - <?php echo $view->getName()?>的个人中心</title>
+    <script type="text/javascript" src="/assets/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="/assets/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/common.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/personal.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/user-info.css">
-    <script type="text/javascript" src="/assets/js/jquery-3.1.1.min.js"></script>
 </head>
 <body>
 <?php include dirname(__FILE__)."/view/utilityView/banner.php" ?>
@@ -61,30 +70,13 @@ function getPersonalInfo($id,$view){
         <?php
         include $view->getInfo();
         ?>
-        </div>
-        <div class="personal-social content">
-            <div class="block">
-                <div class="social-title">关注</div>
-                <a id="focus-num" href="/personal.php/focus/<?php echo $view->getId()?>"><?php echo $view->getFocus() ?></a>
-            </div>
-            <div class="block">
-                <div class="social-title">粉丝</div>
-                <a id="fans-num"href="/personal.php/fans/<?php echo $view->getId()?>"><?php echo $view->getFans() ?></a>
-            </div>
-            <?php
-            if ($view->isSelf()){
-                echo "<div class=\"block\">
-                <div class=\"social-title\">好友</div>
-                <a href=\"/friends.php/friend/".$view->getId()."\">".$view->getFriend()."</a></div>";
-            }
-            ?>
-        </div>
         <?php
         if (!$view->isSelf()){
             echo "<script type=\"text/javascript\" src=\"/view/personalView/user-info.js\"></script>";
         }
         ?>
-        <?php include $view->getContent() ?>
+        <?php
+        if ($view->getContent() != "") include $view->getContent() ?>
     </div>
 </div>
 </body>

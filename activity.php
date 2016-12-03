@@ -20,7 +20,7 @@ if (count($arr) > 2){
                     exit();
                 } else if ($arr[3] == "join"){
                     $controller->join($arr[4], BannerView::getBanner()->getId());
-                    header("Location: /activity.php/activity");
+
                     exit();
                 }
             } else {

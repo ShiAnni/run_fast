@@ -65,10 +65,30 @@ class PersonalModel extends Model {
     }
 
     function editPersonalInfo($userId, $personalInfo){
-
+        return (int)$this->dataAccess->executeInUpDe("UPDATE user SET description='".$personalInfo->description[0]."',gender='".$personalInfo->gender[0]."'
+        ,location='".$personalInfo->location[0]."',birthday='".$personalInfo->birthday[0]."' WHERE id=".$userId);
     }
 
     function updateExperience($userId, $experienceIncrease){
+        $row = $this->dataAccess->executeSelect("SELECT experience FROM user WHERE id=".$userId)->fetchArray();
+        if ($row){
+            $level = $this->getLevel((int)$row["experience"]+(int)$experienceIncrease);
+            $result = $this->dataAccess->executeInUpDe("UPDATE user SET experience=experience+".$experienceIncrease.",level=".$level." WHERE id=".$userId);
+            return $result;
+        } else {
+            return false;
+        }
+    }
 
+    private function getLevel($experience){
+        $level = 0;
+        for ($i = 0;$i < 8;$i++){
+            if ($experience >= (pow(2,$i)-1)*1000){
+                $level++;
+            } else {
+                return $level;
+            }
+        }
+        return 8;
     }
 }

@@ -39,7 +39,11 @@ foreach ($xmlList->children() as $item){
     if($item->publisherId[0] == $_SESSION["id"]){
         $itemHtml->getElementsByTagName("a")[2]->setAttribute("style","display:none");
     } else {
-        $itemHtml->getElementsByTagName("a")[2]->setAttribute("href","/activity.php/activity/join/".$item->id[0]);
+        if (((int)$item->isJoined[0]) == 1){
+            $itemHtml->getElementsByTagName("a")[2]->setAttribute("class","custom-btn plane-colored-btn btn-right btn-disabled");
+        } else {
+            $itemHtml->getElementsByTagName("a")[2]->setAttribute("href","/activity.php/activity/join/".$item->id[0]);
+        }
     }
     $xmlStr.= $itemHtml->saveHTML();
 }

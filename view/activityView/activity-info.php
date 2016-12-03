@@ -17,6 +17,7 @@ $infoView->setEndTime($result->endDate[0]);
 $infoView->setLocation($result->location[0]);
 $infoView->setId($result->id[0]);
 $infoView->setPublisherId($result->publisherId[0]);
+$infoView->setIsJoined($result->isJoined[0]);
 ?>
 <link rel="stylesheet" type="text/css" href="../../assets/css/activity-info.css">
 <div class="common-column content activity-info-content content-first">
@@ -47,7 +48,11 @@ $infoView->setPublisherId($result->publisherId[0]);
         if ($infoView->getPublisherId() == BannerView::getBanner()->getId()){
             echo "<a class=\"btn-right custom-btn plane-colored-btn\" href=\"/activity.php/activity/delete/".$infoView->getId()."\">删除活动</a>";
         } else {
-            echo "<a class=\"btn-right custom-btn plane-colored-btn\" href=\"/activity.php/activity/join/".$infoView->getId()."\">参加活动</a>";
+            if (((int)$infoView->getIsJoined()) == 1){
+                echo "<a class=\"btn-right custom-btn plane-colored-btn btn-disabled\">参加活动</a>";
+            } else {
+                echo "<a class=\"btn-right custom-btn plane-colored-btn\" href=\"/activity.php/activity/join/".$infoView->getId()."\">参加活动</a>";
+            }
         }
         ?>
     </div>

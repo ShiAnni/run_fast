@@ -1,6 +1,8 @@
 <statistics>
-    <data>
-        <time></time>
-        <num></num>
-    </data>
+    <title></title>
+    <unit></unit>
+    <type></type>
+    <dataList>
+
+    </dataList>
 </statistics>

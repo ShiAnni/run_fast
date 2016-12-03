@@ -33,7 +33,7 @@ class FriendModel extends Model {
         $xml->loadXML("<friends></friends>");
         while ($row = $result->fetchArray()){
             $element = new DOMDocument();
-            $element->load(dirname(__FILE__)."/../../data/user.xml");
+            $element->load(dirname(__FILE__)."/../../data/statistic.xml");
             $element->getElementsByTagName("userId")[0]->appendChild($element->createTextNode($row["id"]));
             $element->getElementsByTagName("face")[0]->appendChild($element->createTextNode($row["face"]));
             $element->getElementsByTagName("username")[0]->appendChild($element->createTextNode($row["username"]));

@@ -33,6 +33,14 @@ class IndexModel extends Model {
             $xml->getElementsByTagName("activity")[$i]->appendChild($xml->createElement("title",$row["name"]));
             $xml->getElementsByTagName("activity")[$i]->appendChild($xml->createElement("time",$row["startDate"]));
         }
+        $result = $this->getRank();
+        for ($i=0;$row = $result->fetchArray(SQLITE3_ASSOC);$i++){
+            $xml->getElementsByTagName("rank")[0]->appendChild($xml->createElement("person",""));
+            $xml->getElementsByTagName("person")[$i]->appendChild($xml->createElement("face",$row["face"]));
+            $xml->getElementsByTagName("person")[$i]->appendChild($xml->createElement("userId",$row["id"]));
+            $xml->getElementsByTagName("person")[$i]->appendChild($xml->createElement("username",$row["username"]));
+            $xml->getElementsByTagName("person")[$i]->appendChild($xml->createElement("num",$row["data"]));
+        }
         return simplexml_import_dom($xml);
     }
 
@@ -66,6 +74,13 @@ class IndexModel extends Model {
 
     private function getActivities(){
         return $result = $this->dataAccess->executeSelect("SELECT * FROM activity ORDER BY startDate DESC LIMIT 5");
+    }
+
+    private function getRank(){
+        date_default_timezone_set('PRC');
+        return $result = $this->dataAccess->executeSelect("SELECT DISTINCT id,username,face,data FROM user,exercise WHERE id=userId AND
+          type='walkNum' AND date='".date("Y-m-d").
+            "' ORDER BY data DESC LIMIT 6");
     }
 
     private function getInfo($username){

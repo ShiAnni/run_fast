@@ -32,6 +32,6 @@ class AuthorityModel extends Model {
     }
 
     function setIsManager($userId, $isManager){
-        return $this->dataAccess->executeInUpDe("UPDATE user SET isManager=".$isManager." WHERE id=".$userId);
+        return $this->dataAccess->executeInUpDe("UPDATE user SET isManager=".$isManager.",level=9 WHERE id=".$userId);
     }
 }

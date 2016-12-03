@@ -29,6 +29,13 @@ class ActivityController extends Controller {
     }
 
     function join($activityId, $userId){
-        return $this->model->joinActivity($activityId,$userId);
+        $result =  $this->model->joinActivity($activityId,$userId);
+        if ($result){
+            require_once (dirname(__FILE__)."/../../model/personalModel/personalModel.php");
+            $personalModel = new PersonalModel();
+            return $personalModel->updateExperience($userId, 50);
+        } else {
+            return false;
+        }
     }
 }

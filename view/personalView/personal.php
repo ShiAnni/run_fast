@@ -6,6 +6,7 @@
  * Time: 14:38
  */
 session_start();
+require_once (dirname(__FILE__)."/../../controller/personalController/personalController.php");
 require_once (dirname(__FILE__)."/../../controller/personalController/dynamicsController.php");
 require_once (dirname(__FILE__)."/../../controller/personalController/focusController.php");
 require_once (dirname(__FILE__)."/../../controller/personalController/fansController.php");
@@ -47,6 +48,16 @@ if (count($arr) > 4){
         case "focus":
             $controller = new FansController();
             echo $controller->focusUser($_SESSION["id"],$_POST["id"]);
+            break;
+        case "edit":
+            $controller = new PersonalController();
+            $xml = new DOMDocument();
+            $xml->load(dirname(__FILE__)."/../../data/personalEdit.xml");
+            $xml->getElementsByTagName("description")[0]->appendChild($xml->createTextNode($_POST["description"]));
+            $xml->getElementsByTagName("gender")[0]->appendChild($xml->createTextNode($_POST["gender"]));
+            $xml->getElementsByTagName("location")[0]->appendChild($xml->createTextNode($_POST["location"]));
+            $xml->getElementsByTagName("birthday")[0]->appendChild($xml->createTextNode($_POST["birthday"]));
+            echo $controller->editPersonalInfo($_SESSION["id"],simplexml_import_dom($xml));
             break;
     }
 }

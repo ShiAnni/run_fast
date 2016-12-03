@@ -4,6 +4,18 @@ require_once (dirname(__FILE__)."/view/indexView/indexView.php");
 $view = new IndexView();
 require_once (dirname(__FILE__)."/controller/activityController/activityController.php");
 BannerView::getBanner()->setSelected("index.php");
+$uri = $_SERVER['REQUEST_URI'];
+$arr = explode("/", $uri);
+if (count($arr) > 2){
+    if ($arr[2] == "logout"){
+        $_SESSION["id"] = null;
+        $_SESSION["name"] = null;
+        $_SESSION["face"] = null;
+        $_SESSION["isManager"] = null;
+        header("Location: /login.php");
+        exit();
+    }
+}
 require_once (dirname(__FILE__)."/controller/indexController/indexController.php");
 $controller = new IndexController();
 $result = $controller->initialize();
@@ -43,6 +55,35 @@ foreach ($activityList->children() as $child){
 $view->setActivities($activityStr);
 
 $rank = $result->rank;
+$rankStr = "";
+$i = 1;
+foreach ($rank->children() as $child){
+    $itemHtml = new DOMDocument();
+    $itemHtml->loadHTMLFile(dirname(__FILE__)."/view/indexView/rank-info.html");
+    $itemHtml->getElementsByTagName("a")[0]->setAttribute("href","/personal.php/person/".$child->userId[0]);
+    $itemHtml->getElementsByTagName("img")[0]->setAttribute("src",$child->face[0]);
+    $itemHtml->getElementsByTagName("img")[0]->setAttribute("alt",$child->username[0]);
+    $itemHtml->getElementsByTagName("div")[0]->appendChild($itemHtml->createTextNode($i));
+    switch ($i){
+        case 1:
+            $itemHtml->getElementsByTagName("div")[0]->setAttribute("class","rank-num rank-first common-column");
+            break;
+        case 2:
+            $itemHtml->getElementsByTagName("div")[0]->setAttribute("class","rank-num rank-second common-column");
+            break;
+        case 3:
+            $itemHtml->getElementsByTagName("div")[0]->setAttribute("class","rank-num rank-third common-column");
+            break;
+        default:
+            $itemHtml->getElementsByTagName("div")[0]->setAttribute("class","rank-num common-column");
+            break;
+    }
+    $itemHtml->getElementsByTagName("div")[1]->appendChild($itemHtml->createTextNode($child->username[0]));
+    $itemHtml->getElementsByTagName("div")[2]->appendChild($itemHtml->createTextNode($child->num[0]."步"));
+    $i++;
+    $rankStr.= $itemHtml->saveHTML();
+}
+$view->setRank($rankStr);
 ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
@@ -80,54 +121,6 @@ $rank = $result->rank;
             <div class="title">运动排名</div>
             <ul class="rank-ul">
                 <?php echo $view->getRank()?>
-                <li class="common-columns">
-                    <a>
-                        <div class="rank-num rank-first common-column">1</div>
-                        <img src="image/faceimg.jpg" class="list-face-img rank-face common-column">
-                        <div class="rank-name common-column">大清没有完</div>
-                        <div class="element-right rank-data">12392步</div>
-                    </a>
-                </li>
-                <li class="common-columns">
-                    <a>
-                        <div class="rank-num rank-second common-column">2</div>
-                        <img src="image/manager.jpg" class="list-face-img rank-face common-column">
-                        <div class="rank-name common-column">doge</div>
-                        <div class="element-right rank-data">11232步</div>
-                    </a>
-                </li>
-                <li class="common-columns">
-                    <a href="/view/personaluser-info.html">
-                        <div class="rank-num rank-third common-column">3</div>
-                        <img src="image/friend_face_2.jpg" class="list-face-img rank-face common-column">
-                        <div class="rank-name common-column">学习一个</div>
-                        <div class="element-right rank-data">10010步</div>
-                    </a>
-                </li>
-                <li class="common-columns">
-                    <a>
-                        <div class="rank-num common-column">4</div>
-                        <img src="image/apply_face.jpg" class="list-face-img rank-face common-column">
-                        <div class="rank-name common-column">维他柠檬茶</div>
-                        <div class="element-right rank-data">8632步</div>
-                    </a>
-                </li>
-                <li class="common-columns">
-                    <a>
-                        <div class="rank-num common-column">5</div>
-                        <img src="image/friend_face.png" class="list-face-img rank-face common-column">
-                        <div class="rank-name common-column">小埋</div>
-                        <div class="element-right rank-data">3412步</div>
-                    </a>
-                </li>
-                <li class="common-columns">
-                    <a>
-                        <div class="rank-num common-column">6</div>
-                        <img src="image/apply_face_2.jpg" class="list-face-img rank-face common-column">
-                        <div class="rank-name common-column">爱姆安格瑞</div>
-                        <div class="element-right rank-data">1012步</div>
-                    </a>
-                </li>
             </ul>
         </div>
     </div>

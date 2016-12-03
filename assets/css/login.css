@@ -35,11 +35,30 @@ dd {
     min-height: 400px;
     text-align: left;
     position: relative;
+    flex: 0 1 auto;
 }
-.jumbotron-index {
-    background-image: url("../../image/index-run.jpg");
-    background-size: cover;
+@media screen and (max-height: 500px){
+    .jumbotron-index {
+        background-image: url("../../image/index-run-1000x500.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
+@media screen and (max-height: 800px){
+    .jumbotron-index {
+        background-image: url("../../image/index-run-1600x800.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+@media screen and (max-height: 1000px){
+    .jumbotron-index {
+        background-image: url("../../image/index-run-2000x1000.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
 
 .column {
     padding-left: 20px;
