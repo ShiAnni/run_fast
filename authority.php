@@ -16,6 +16,7 @@ $view = new AuthorityView();
     <link rel="stylesheet" type="text/css" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/common.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/authority.css">
+    <script type="text/javascript" src="/assets/js/jquery-3.1.1.min.js"></script>
 </head>
 <body>
 <?php include "view/utilityView/banner.php" ?>

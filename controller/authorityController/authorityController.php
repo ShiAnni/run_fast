@@ -12,15 +12,15 @@ class AuthorityController extends Controller {
         $this->model = new AuthorityModel();
     }
 
-    function getUserList($keyword){
-        $this->model->getUserList($keyword);
+    function getUserList($keyword=""){
+        return $this->model->getUserList($keyword);
     }
 
     function setManager($userId){
-        $this->model->setIsManager($userId,true);
+        return $this->model->setIsManager($userId,1);
     }
 
     function releaseManager($userId){
-        $this->model->release($userId,false);
+        return $this->model->setIsManager($userId,0);
     }
 }

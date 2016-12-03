@@ -1,15 +1,6 @@
 <statistics>
-    <userId></userId>
-    <dataType></dataType>
-    <statisticType></statisticType>
-    <dataList>
-        <data>
-            <time></time>
-            <num></num>
-        </data>
-        <data>
-            <time></time>
-            <num></num>
-        </data>
-    </dataList>
+    <data>
+        <time></time>
+        <num></num>
+    </data>
 </statistics>
