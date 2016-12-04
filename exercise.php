@@ -263,6 +263,12 @@ foreach ($result->children() as $child){
                 break;
         }
     });
+    var user = function(){
+        var userId = <?php echo $_SESSION["id"] ?>;
+        function getUserId (){
+            return userId;
+        }
+    }
     $(".close_btn").hover(function () { $(this).css({ color: 'black' }) }, function () { $(this).css({ color: '#999' }) }).on('click', function () {
         exitRecord();
     });
@@ -270,6 +276,7 @@ foreach ($result->children() as $child){
         var id = $(".record-confirm-btn").attr("id");
         var regIn = /[0-9]+/;
         var regFl = /[0-9]+([.]{1}[0-9]+){0,1}/;
+        var userId = user.getUserId();
         switch (id){
             case "walk-re":
                 var walkNum = $("#record-text-first").val();
@@ -447,6 +454,7 @@ foreach ($result->children() as $child){
         $(".date_start").datetimepicker("setEndDate",new Date());
         $(".date_end").datetimepicker("setEndDate",new Date());
     });
+
 </script>
 </body>
 </html>
